@@ -1,9 +1,11 @@
 # EBU DS HTML
+# Gallery has all components /gallery.html
 
 ## Build Setup
 
 # bash
 add page on build.sh => pages+=("new-page")
+
 # build code
 $ npm run build
 
