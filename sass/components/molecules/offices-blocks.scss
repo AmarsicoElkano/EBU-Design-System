@@ -1,0 +1,28 @@
+.offices-container{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .grip-offices{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 100px;
+    grid-row-gap: 80px;
+    margin-top: 40px;
+    p{
+      margin: 6px 0;
+      &.strongBlue{
+        color:$primary;
+        font-weight: 700;
+      }
+    }
+    @media (max-width:1000px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 50px;
+      grid-row-gap: 40px;      
+    }
+    @media (max-width:640px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 30px;      
+    }
+  }
+}

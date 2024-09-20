@@ -1,0 +1,19 @@
+.cards-services{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    gap:30px;
+    color:$black;
+    padding: 50px;
+    margin:60px 0;
+    &_icon{min-width: 280px;}
+    @media (max-width:900px) {
+        padding: 30px;
+        flex-direction: column;
+        gap: 20px;
+        &_icon{
+            min-width: 100%;
+            text-align: center;
+        }
+    }
+}

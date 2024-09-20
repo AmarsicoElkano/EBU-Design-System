@@ -1,0 +1,61 @@
+.card-specifics {
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    gap: 20px;
+    column-gap: 50px;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+  &__container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    @include respond-to('mobile-medium') {
+      flex-direction: column;
+    }
+  }
+  &__highlights {
+    height: 250px;
+    padding: 25px;
+    border-radius: 6px;
+    &:hover {
+      cursor: pointer;
+      background-color: blue;
+      background-blend-mode: multiply;
+    }
+    &.right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .next-button {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .left-text {
+      margin-top: 75px;
+      max-width: 400px;
+      flex-wrap: wrap;
+      text-wrap: normal;
+      width: 90%;
+      span {
+        font-weight: 400;
+        color: #FFFFFF;
+        opacity: 0.5;
+      }
+    }
+    .right-text{
+      flex-wrap: wrap;
+      text-wrap: normal;
+      max-width: 400px;
+    }
+    span {
+        font-weight: 400;
+        color: #FFFFFF;
+        opacity: 0.5;
+      }
+  }
+}

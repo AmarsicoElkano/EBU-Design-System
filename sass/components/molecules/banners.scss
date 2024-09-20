@@ -1,0 +1,94 @@
+
+.banner {
+    width: 100%;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  
+    &.option-1 {
+      height: 448px;
+  
+      .overlay {
+        background-color: #1c3f98cc;
+      }
+  
+      @media screen and (max-width: 360px) {
+        height: 573px;
+      }
+    }
+  
+    &.option-2 {
+      height: 386px;
+  
+      .overlay {
+        background-color: #873299cc;
+      }
+  
+      @media screen and (max-width: 360px) {
+        height: 386px;
+      }
+    }
+  
+    &.option-3 {
+      height: 380px;
+      background-size: contain;
+      background-position: 80%;
+  
+      .overlay {
+        .image-overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-position: 100%;
+          background-size: cover;
+  
+          @media screen and (max-width: 710px) {
+            background-position: 70%;
+          }
+  
+          @media screen and (max-width: 395px) {
+            background-position: 65%;
+          }
+        }
+      }
+      &:not(.option-3){
+        .image-overlay{display: none;}
+      }
+  
+      @media screen and (max-width: 360px) {
+        height: 386px;
+      }
+    }
+    &.option-4 {
+      height: 100dvh;
+  
+      // .overlay {
+      //   position: absolute;
+      //   top: 0;
+      //   bottom: 0;
+      //   left: 0;
+      //   right: 0;
+      //   background-color: #873299cc;
+      //   opacity: .2;
+      // }
+
+      .image-banner {
+        position: absolute;
+        top: 0; left: 0;
+        bottom: 0; right: 0;
+        background-color: $medium-blue;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }

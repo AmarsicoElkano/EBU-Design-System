@@ -1,0 +1,95 @@
+.sublicensee {
+  &__first-section {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 60px;
+    @include respond-to('tablet') {
+      flex-direction: column;
+
+    }
+    &_left-content {
+      width: 50%;
+      .text {
+        color: $black;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px; /* 144.444% */
+      }
+      @include respond-to('tablet') {
+       width: 100%;
+  
+      }
+    }
+    &_right-content {
+      width: 50%;
+      .media-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 24px;
+        .card {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+          max-width: calc(50% - 14px);
+          span {
+            max-width: 273px;
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px; /* 150% */
+          }
+        }
+
+      }
+      @include respond-to('tablet') {
+        width: 100%;
+        .media-items{          
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          gap: 20px;
+          .card{
+            max-width: calc(50% - 10px);
+          }
+        }
+      }
+
+    }
+  }
+  &__second-section {
+    margin: auto;
+    max-width: 60%;
+    @include respond-to('tablet') {
+      max-width: 100%;
+      .item.faq{background-color: #FFF !important;}
+    }
+  }
+}
+
+.how-to-join{
+  .pre-footer{
+    max-width: 100%;
+    &__mid{
+      padding: 30px 0;
+      .newsletter{
+        flex-direction: row;
+        border-radius: 30px;
+        box-sizing: border-box;
+        max-height: 60px;
+        margin-top: 10px;
+        margin-bottom: 0;
+        input{margin-bottom: 0;}
+        .primary-button{
+          width: 50%;
+          background-color: $primary;
+          color: white;
+        }
+      }
+    }
+  }
+}

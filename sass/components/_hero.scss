@@ -1,0 +1,127 @@
+.ebu_hero{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 62px;
+  color: white;
+  &.home{
+    height: 510px;
+    background-color: $blue;
+    background-blend-mode: soft-light;
+    background-image: url('../../assets/img/hero_home.jpg');
+    .ebu_button.bg.lightblue {
+      color: $darkBlue;
+      &:hover {
+        background-color: #FFF;
+      }
+    }
+  }
+  &.events{height: 448px;}
+  &.register{height: 320px;}
+  .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .tag{
+    padding: 0 20px;
+    background-color: white;
+    height: 26px;
+    color: $blue;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    &::before{
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 7px;
+      margin-right: 8px;
+      display: block;
+    }
+    &.tag-assemblies::before{background-color:$red;}
+    &.tag-community::before{background-color:$violet;}
+    &.tag-group::before{background-color:$yellow;}
+    &.tag-user-pay::before{background-color:$green;}
+    &.tag-other::before{background-color:$darkGreen;}
+    &.tag-stream::before{background-color:$green;}
+  }
+  h1{
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.24;
+    margin-bottom: 16px;
+  }
+  p{
+    font-size: 22px;
+    line-height: 1.4;
+    max-width: 590px;
+    small{
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  // card
+  &_card{
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 40px 30px;
+    max-width: 446px;
+    width: 100%;
+    h5{
+      font-size: 22px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+    p{
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+  }
+  &_button {
+    margin-right: 62px;
+  }
+  &_collaboration {
+    text-align: center;
+    &-title {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-bottom: 5px;
+    }
+  }
+  @include respond-to('mobile') {
+    .container {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &.home{
+      height: auto;
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    &_heading {
+      margin: 65px 0 0 0;
+      width: 100%;
+    }
+    &_card {
+      margin: 65px 0;
+    }
+    p {
+      font-size: 18px;
+      line-height: 26px;
+      max-width: none;
+    }
+    &_button {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}

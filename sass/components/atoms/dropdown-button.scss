@@ -1,0 +1,44 @@
+.dropdown-button {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  padding: 0;
+  background: transparent;
+  span {
+    margin-right: 12px;
+    font-weight: inherit;
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+  .icon {
+    width: 0.8em;
+    fill: currentColor;
+    position: relative;
+    top: -1px;
+    transition: background 1s cubic-bezier(0.56, 0.23, 0, 1), transform 1s cubic-bezier(0.56, 0.23, 0, 1);
+  }
+  &.blue {
+    .icon {
+      fill: #1B4098;
+    }
+  }
+  &.active {
+    span {
+      &:nth-last-child(2) {
+        display: inline-block;
+      }
+      &:nth-last-child(3) {
+        display: none;
+      }
+    }
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+}

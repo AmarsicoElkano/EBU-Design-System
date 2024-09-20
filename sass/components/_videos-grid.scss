@@ -1,0 +1,23 @@
+.videos-grid {
+  $margin: 20px;
+  .grid-container {
+    width: calc(100% + #{$margin} * 2);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 72px;
+    margin-left: -$margin;
+    .video-preview {
+      width: calc(100% / 3 - #{$margin} * 2);
+      margin: $margin;
+    }
+  }
+  @include respond-to('mobile') {
+    .grid-container {
+      margin-top: 20px;
+      flex-direction: column;
+      .video-preview {
+        width: calc(100% - #{$margin} * 2);
+      }
+    }
+  }
+}

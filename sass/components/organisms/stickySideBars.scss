@@ -1,0 +1,264 @@
+.sticky-sidebars {
+  hr {
+    border: solid 1pt #E0E0E0 !important;
+  }
+
+  .tags.tag {
+    box-shadow: none !important;
+    border: solid $gray-02 1px !important;
+  }
+
+  .icon-text {
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    span {
+      margin-top: 6px;
+      margin-left: 10px;
+    }
+
+    .left {
+      width: 10%;
+    }
+  }
+
+  strong {
+    font-weight: 600 !important;
+  }
+
+  .radio-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+  }
+
+  &__course-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    row-gap: 10px;
+    flex-shrink: 0;
+    font-size: 14px;
+    img {
+      margin: auto;
+      max-width: 600px;
+      max-height: 320px;
+      @include respond-to('mobile-medium') {
+        width: 100%;
+      }
+    }
+  }
+
+  .notification-text {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .documents {
+    max-width: 300px;
+
+    &.large {
+      max-width: 450px !important;
+    }
+
+    .form {
+      input, textarea {
+        width: 95%;
+        height: 36px;
+        border: none;
+        border-radius: 6px;
+        margin-top: 20px;
+        padding-left: 20px !important;
+      }
+
+      textarea {
+        min-height: 150px;
+        padding-top: 20px;
+      }
+
+      input::placeholder, textarea::placeholder {
+        color: #cccccc;
+      }
+    }
+
+    &.large {
+      min-height: 400px;
+    }
+  }
+
+  .blue-card {
+    width: 384px;
+    @include respond-to('mobile-medium') {
+      width: 100vw;
+    }
+  }
+
+  .small-text {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    text-wrap: normal;
+    color: $white;
+  }
+
+  .ads-text {
+    font-size: 14px;
+    color: #595959;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  &__next-edition-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #ffffff;
+    margin-bottom: 32px;
+  }
+
+  hr {
+    width: 100%;
+    border: solid 0.4px white;
+  }
+
+  ul {
+    padding-left: unset !important;
+  }
+
+  .subheader {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+  }
+
+  .registered {
+    font-weight: 700;
+    font-size: 14px;
+    color: $light-blue;
+  }
+
+  .simple-contact {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__long {
+    display: flex;
+
+    .left {
+      min-width: 20%;
+      vertical-align: center;
+    }
+
+    .right {
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+      text-wrap: normal;
+      align-self: baseline;
+      margin-top: 10px;
+      color: $white;
+    }
+  }
+
+  .white-card {
+    display: flex;
+    justify-content: center;
+    padding: 0 32px;
+    height: 101px;
+    width: 320px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    flex-shrink: 0;
+    &.course {
+      flex-shrink: 0;
+      padding: 20px 28px;
+      height: 103px;
+      min-width: 515px;
+      box-sizing: border-box;
+    }
+    @include respond-to('mobile-medium') {
+      min-width: 90vw;
+    }
+  }
+
+  .yellow-card {
+    height: 89px;
+    border-radius: 6px;
+    max-width: 475px !important;
+    padding: 0 20px 0 20px;
+    background-color: $yellow;
+    @include respond-to('mobile-medium') {
+      height: auto;
+    }
+  }
+
+  .big-card {
+    border-radius: 6px;
+    background-color: $white;
+    min-height: 337px;
+    padding: 25px;
+    min-width: 465px;
+    @include respond-to('mobile-medium') {
+      width: 80%;
+      min-width: unset;
+    }
+
+    .save {
+      @include respond-to('mobile-medium') {
+        display: none;
+      }
+    }
+
+    .save-mobile {
+      display: flex;
+      justify-content: center;
+      @media screen and (min-width: 580px) {
+        display: none;
+      }
+    }
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .sub-title {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+
+  .left-info {
+    margin: auto;
+    min-width: 80%;
+
+    .sub-title {
+      padding-top: 13px;
+    }
+
+    p {
+      margin: unset;
+    }
+  }
+
+  .contact-photo {
+    margin: auto;
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .sticky-sidebars {
+    .component-variation {
+      margin: auto;
+    }
+  }
+}

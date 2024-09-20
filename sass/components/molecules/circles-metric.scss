@@ -1,0 +1,182 @@
+.circles-metric {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .circles-metric__data {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all .3s ease-in-out;
+        @media (width < 850px) {
+            visibility: hidden;
+            
+        }
+
+        &.up {
+            top: -45px;
+        }
+
+        .circles-metric__data-number {
+            font-family: "Proxima Nova";
+            font-size: 64px;
+            font-weight: 600 !important;
+            line-height: 100%;
+            letter-spacing: -3px;
+            margin: 0;
+            color: #ffffff80;
+            transition: color .3s ease-in-out;
+            
+            @media (width < 1439px) {
+                font-size: 35px;
+                
+            }
+        }
+
+        .circles-metric__data-label {
+            font-family: "Proxima Nova";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700 !important;
+            line-height: 16px; 
+            text-transform: uppercase;
+            margin: 0;
+            max-width: 100px;
+            color: $gray-04;
+
+            @media (width < 1439px) {
+                font-size: 10px;
+                
+            }
+        }
+
+    }
+
+    .circles-metric__circle {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #96a2c1;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform-origin: center;
+        transform: scale(.5);
+        transition: all .3s ease-in-out;
+        margin-left: 10px;
+
+        @media (width < 1439px) {
+            width: 60px;
+            height: 60px;
+            margin-left: 4px;
+        }
+    
+        .circles-metric__dot {
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            background-color: #96a2c1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-origin: center;
+            transform: scale(.24);
+            transition: all .3s ease-in-out;
+
+            @media (width < 1439px), (height < 725px) {
+                width: 50px;
+                height: 50px;
+            }
+
+            svg {
+                transform: scale(0);
+                transform-origin: center;
+                transition: transform .3s ease-in-out;
+                
+ 
+            }
+        }
+    }
+
+    &.reverse {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    &.active {
+
+        .circles-metric__data {
+            opacity: 1;
+            transform: translate(0);
+        }
+
+        .circles-metric__circle {
+            transform: scale(1);
+        
+            .circles-metric__dot {
+               transform: scale(1);
+
+               svg {
+                transform: scale(1);
+
+                @media (width < 1439px), (height < 725px) {
+                    transform: scale(.8);
+                }
+               }
+            }
+    
+        }
+    }
+
+}
+
+.turn-red {
+    .circles-metric__data-number {
+        color: $red-ruby-fire !important;
+    }
+
+    .circles-metric__circle {
+        border-color: $red-ruby-fire;
+        
+    }
+
+    .circles-metric__dot {
+        background-color: $red-ruby-fire !important;
+    }
+}
+
+.turn-green {
+    .circles-metric__data-number {
+        color: $green-overgrown-mausoleum !important;
+    }
+
+    .circles-metric__circle {
+        border-color: $green-overgrown-mausoleum;
+    }
+
+    .circles-metric__dot {
+        background-color: $green-overgrown-mausoleum !important;
+    }
+}
+
+.turn-purple {
+    .circles-metric__data-number {
+        color: $purple-warm !important;
+    }
+
+    .circles-metric__circle {
+        border-color: $purple-warm;
+    }
+
+    .circles-metric__dot {
+        background-color: $purple-warm !important;
+    }
+}

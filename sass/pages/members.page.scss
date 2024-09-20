@@ -1,0 +1,13 @@
+@import '../variables.scss';
+@import '../util/mixins.scss';
+@import '../util/breakpoints.scss';
+.more-info,
+.open-popup-exchange{
+    font-weight: 600;
+    svg{transition: ease-out 0.5s;}
+    &:hover{
+        svg{
+            transform: rotate(180deg);
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.dropdown {
+    position: relative;
+    width: 300px;
+    label{
+      display: block;
+      margin-bottom: 10px;
+      color: #77889D;
+      font-size: 14px;
+    }
+    &-input{
+      box-sizing: border-box;
+      border: 1px solid #B4BFCA;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding: 0 14px 0 20px;
+      background: #FFFFFF;
+      cursor: pointer;
+      &.open{
+        svg{transform: scaleY(-1);}
+      }
+      input{
+        box-sizing: border-box;
+        appearance: none;
+        border:none;
+        margin:0;
+        padding: 0;
+        outline: none;
+        width: 100%;
+        font-family: inherit;
+        display: block;
+        height: 40px;
+        background: #FFFFFF;
+        font-size: 12px;
+        font-weight: 400;
+        color: #122A64;    
+        pointer-events: none;
+      }
+    }
+    &-options{
+      margin-top: 4px;
+      position: absolute;
+      top:100%;width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #B4BFCA;
+      border-radius: 4px;
+      background: #FFFFFF;
+      max-height: 164px;
+      padding: 5px;
+      overflow-y: scroll;
+      transition: ease-in 0.4s;
+      z-index: 2;
+      &[data-view="close"]{
+        transform: translateY(20px);
+        opacity: 0;
+        pointer-events: none;
+      }
+      &::-webkit-scrollbar {
+        width: 2px;
+      }        
+      &::-webkit-scrollbar-thumb {
+        background: #77889D;
+        border-radius: 2px;
+        width: 2px;
+        outline: 2px solid white;
+      }
+      ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        padding-right: 2px;
+        li{
+            font-size: 14px;
+          display: flex;
+          align-items: center;
+          height: 30px;
+          padding: 0 15px;
+          border-radius: 4px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.85);
+          transition: ease-in-out 0.3s;
+          cursor: pointer;
+          &:hover{
+            color:white;
+            background: #1B4098;
+          }
+        }
+      }
+    }
+  }

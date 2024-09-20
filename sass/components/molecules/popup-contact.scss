@@ -1,0 +1,59 @@
+.contentPopUp{
+    position: fixed;
+    z-index: 100;
+    left: 0;top:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    transition: ease-in 0.5s;
+    &.hiden{
+      opacity: 0;
+      pointer-events: none;
+    }
+    .popupContact {
+      max-width: 750px;
+      border-radius: 5px;
+      background:white;
+      padding: 60px;
+      position: relative;
+      left:50%;top:50%;
+      transform: translate(-50%,-50%);
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      .btClose{
+        cursor: pointer;
+        position:absolute;
+        right: 36px;top:36px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        padding: 0;margin: 0;
+        border:none;
+        background: transparent;
+      }
+      .profiles{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 30px; 
+        &.cols3{
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 50px;
+          grid-row-gap: 20px; 
+        }
+      }
+      @media (max-width:900px) {
+        padding: 30px;
+        .profiles{
+          grid-template-columns: repeat(1, 1fr);
+          grid-column-gap: 0px;
+          grid-row-gap: 20px; 
+          &.cols3{
+            grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: 00px;
+            grid-row-gap: 20px; 
+          }
+        }
+      }
+    }
+  }

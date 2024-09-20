@@ -1,0 +1,27 @@
+.map-contact{
+  display: flex;
+  &_mid{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-end;
+    & > img{
+        display: block;
+        width: 100%;
+    }
+  }
+  &_copy{
+    max-width: 600px;
+    padding-left: 30px;
+    width: 100%;
+  }
+  @media (max-width:900px) {
+    flex-direction: column;
+    &_mid{width: 100%;}
+    &_copy{
+      padding: 60px 20px;
+
+    }
+
+  }
+}

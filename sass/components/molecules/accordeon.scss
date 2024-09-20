@@ -1,0 +1,11 @@
+.accordeon{
+  &-wrapper{
+    width: 100%;
+    max-width: 580px;
+    margin: auto;
+    .list[data-type=faq-list] ul .item.open .item-top svg, .list[data-type=list-with-icon] ul .item.open .item-top svg {
+      transform: rotate(180deg);
+    }
+    .list[data-type=faq-list] ul .item{padding: 20px 0;}
+  }
+}

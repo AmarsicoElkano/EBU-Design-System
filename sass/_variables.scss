@@ -1,0 +1,76 @@
+$curve: cubic-bezier(0.18, 0.78, 0, 1);
+$in-out: cubic-bezier(0.64, 0.1, 0, 1);
+
+$black: #000000;
+$white: white;
+$beige: #E6DFD8;
+
+$gray-05: #F9F9F9;
+$gray-04: #77889D;
+$gray-03: #B4BFCA;
+$gray-02: #D7DDE3;
+$gray-01: #F8F9FA;
+
+
+$medium-blue: #1B4098;
+$light-blue: #0BBBEF;
+$light-blue-2: #14A3E9;
+
+$dark-blue: #122A64;
+$yellow: #FFED00;
+$light-green: #00AD68;
+$dark-green: #004E59;
+$green-overgrown-mausoleum: #488936;
+$purple: #873299;
+$purple-warm: #983795;
+$cherry: #DD0057;
+$red: #DD0031;
+$red-ruby-fire: #ED0C6E;
+
+$primary: $medium-blue;
+$secondary: $light-blue;
+
+$font-normal: 'Proxima Nova', sans-serif;
+
+$vh100: calc(var(--vh, 1vh) * 100);
+
+//EVENTS
+//colors
+$blue: #1C4098;
+$lightBlue: #0BBBEF;
+$darkBlue: #122A64;
+
+//categories
+$red: #DD0057;
+$violet: #873299;
+$yellow: #FFED00;
+$green: #00AD68;
+$darkGreen: #004E59;
+$gray: #B4BFCA;
+$navGray: #77889D;
+$bgBody:#f7f9fa ;
+$clear:#F8F9FA;
+$dark:#D7DDE3;
+
+//PAGES
+
+$colors: (
+  'black': $black,
+  'white': $white,
+  'beige': $beige,
+  'medium-blue': $medium-blue,
+  'light-blue': $light-blue,
+  'light-blue-2': $light-blue-2,
+  'dark-blue': $dark-blue,
+  'yellow': $yellow,
+  'light-green': $light-green,
+  'dark-green': $dark-green,
+  'purple': $purple,
+  'cherry': $cherry,
+  'red': $red,
+  'gray-05': $gray-05,
+  'gray-04': $gray-04,
+  'gray-03': $gray-03,
+  'gray-02': $gray-02,
+  'gray-01': $gray-01,
+);

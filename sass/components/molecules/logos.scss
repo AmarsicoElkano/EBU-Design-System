@@ -1,0 +1,103 @@
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    @media (max-width:900px) {
+      overflow-x:scroll;
+      cursor: grab;
+      padding-bottom: 40px;
+      position: relative;
+      max-width: 100vw;
+      &.members {
+        div {
+          margin-right: 50px;
+        }
+      }
+      &.swiper-wrapper{
+        overflow-x:initial;
+
+      }
+    }
+}
+.contentLogos{
+  margin-top:100px;
+  margin-bottom: 100px;
+  h2{
+    margin-bottom: 40px;
+  }  
+  .text-button{
+    position: absolute;
+    right: 0;top: 20px;
+  }
+  @media (max-width:900px) {
+    margin-top:80px;
+    margin-bottom: 60px;
+    h2{margin-bottom: 6px;}
+    .text-button{
+      position: static;
+      top: 0;
+      margin-bottom: 18px;
+    }
+  }
+}
+.content-logos{
+  position: relative;
+  overflow: hidden;
+  @media (max-width:900px) {
+      &:not(.slider-logos-home):after{
+        content: url('/assets/img/hand-slide.svg');
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+  }
+  &.slider-logos-home {
+    .swiper-slide {
+      height: 63px;
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+    @media (max-width:900px) {
+      margin-top: 40px;
+      .swiper-slide {
+        height: 40px;
+        img {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+  &.slidelogos{
+    padding: 0 50px;
+    .slidelogos_swiper{overflow: hidden;}
+    .arrow-button{
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
+      svg{width: 7px;}
+    }
+    @media (max-width:900px) {
+      padding: 40px 0px 0px;
+      padding-top: 60px;
+      .slidelogos_nav{
+        position: absolute;
+        top: 0;
+        bottom: auto;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        gap:20px;
+        .swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev{
+          position: static;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

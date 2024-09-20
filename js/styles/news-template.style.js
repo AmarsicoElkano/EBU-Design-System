@@ -1,0 +1,1 @@
+import '../../sass/pages/news-template.page.scss'

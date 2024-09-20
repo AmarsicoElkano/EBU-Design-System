@@ -1,0 +1,25 @@
+.paragraphs {
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.44;
+  width: 100%;
+  //Align
+  &.left{text-align: left;}
+  &.center{text-align: center;}
+  &.right{text-align: right;}
+  //Colors
+  &.black{color:#000000}
+  &.dark{color:#595959}
+  &.grey{color:#77889D}
+  &.blue{color: #1B4098;}
+  &.white{color:#ffffff}
+  //Sizes
+  &.P2{font-size: 16px;}
+  &.P1{font-size: 18px;}
+  &.small{font-size:12px;margin: 20px 0;}
+  &.medium{font-size:14px;margin: 0px;}
+  &.large{font-size:18px;margin: 20px 0;}
+  &.xlarge{font-size:22px;margin: 15px 0;}
+  
+  &.P2b{font-size: 16px;font-weight: 700;}
+}

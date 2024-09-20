@@ -1,0 +1,128 @@
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border: none;
+  background: transparent;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: $primary;
+  &.white{color:white}
+  span {
+    display: inline-block;
+    font-size: inherit;
+    font-weight: inherit;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+  }
+  &-icon {
+    width: auto;
+    height: 1.5em;
+    flex-shrink: 0;
+    display: inline-flex;
+    margin-left: 15px;
+    position: relative;
+    z-index: 1;
+    font-size: 0.6em;
+    svg, img {
+      height: 100%;
+      fill: currentColor;
+    }
+  }
+  &[data-direction="up"] {
+    .text-button-icon {
+      transform: rotate(-90deg);
+    }
+  }
+  &[data-direction="down"] {
+    .text-button-icon {
+      transform: rotate(90deg);
+    }
+  }
+  &[data-direction="left"] {
+    .text-button-icon {
+      transform: rotate(180deg);
+    }
+  }
+  &[data-direction="right-up"] {
+    .text-button-icon {
+      transform: rotate(-45deg);
+    }
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+    .text-button-icon {
+      margin-left: 0;
+      margin-right: 15px;
+    }
+  }
+  &:not(.circle) {
+    @include underline;
+  }
+  &.circle {
+    .text-button-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: ease-out .3s;
+      &::before {
+        content: "";
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        background: currentColor;
+        box-sizing: border-box;
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%) scale(0);
+        transition: transform 1s $curve, opacity 1s $curve;
+      }
+    }
+  }
+  &.active {
+    &::after {
+      transform: scaleX(1);
+    }
+    &:hover {
+      &::after {
+        transform: scaleX(0);
+      }
+    }
+  }
+  &.secondary {
+    color: $secondary;
+  }
+  &.red {
+    color: $red;
+  }
+  &.small {
+    font-size: 14px;
+  }
+  &:hover {
+    .text-button-icon {
+      &::before {
+        transform: scale(1.1);
+        //opacity: 0;
+      }
+      transform: translateX(10px);
+    }
+    &.circle {
+      .text-button-icon {
+        &::before {
+          opacity: 0;
+          transform: translateX(-50%) translateY(-50%) scale(2) ;
+        }
+      }
+    }
+  }
+}

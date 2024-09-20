@@ -1,0 +1,22 @@
+.ad-banner {
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+  a {
+    display: block;
+    height: 100%;
+  }
+  img {
+    width: auto;
+    display: block;
+    margin: auto;
+    max-width: 96%;
+  }
+  @include respond-to('tablet'){
+    height: auto;
+    padding: 0;
+  }
+}

@@ -1,0 +1,55 @@
+.tabs-contact{
+    padding:100px 0;
+    .content_tabs{
+        justify-content: flex-start;
+        margin-bottom: 60px;
+        button.btn_tab{margin-left: 0;margin-right: 50px;}
+        @media (max-width:900px) {
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: scroll;
+            button.btn_tab{
+                font-size: 16px;
+                margin-right: 30px;
+            }
+        }
+    }
+    .tabs-contact_content{
+        justify-content: space-between;
+        display: none;
+        &.active{
+            display: flex;
+        }
+        .col_small{
+            max-width: 383px;
+            width: 100%;
+        }
+        .col_big{
+            max-width: 630px;
+            width: 100%;
+        }
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            .inputs-textarea{
+                width: 100%;
+                textarea{
+                    resize: none;
+                    height: 200px;
+                }
+            }
+            button{
+                margin-left: auto;
+                min-width: 180px;
+            }
+        }
+
+        @media (max-width:900px) {
+            flex-direction: column;
+            .inputs, .dropdown{
+                width: 100%;
+            }
+        }
+    }
+}

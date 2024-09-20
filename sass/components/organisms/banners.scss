@@ -1,0 +1,36 @@
+.banners {
+  &_header {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 48px;
+    color: $dark-blue;
+  }
+  &_sub-header {
+    font-weight: 400;
+    font-size: 18px;
+    color: $dark-blue;
+  }
+  &_button-container {
+    max-width: 30%;
+  }
+}
+.background-image {
+  background: url('~/assets/img/ad-banner-background.jpg'), $dark-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 840px) {
+  .banners_header {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .banners_sub-header {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .banners_button-container {
+    max-width: 100%;
+  }
+  
+}

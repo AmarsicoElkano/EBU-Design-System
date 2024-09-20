@@ -1,0 +1,46 @@
+.sports-discover-more {
+    display: flex;
+    align-items: center;
+
+    span {
+        color: $white;
+        transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        border: 1px solid #ffffff4d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        margin-left: 2rem;
+        transition: all .3s cubic-bezier(0.76, 0, 0.24, 1);
+        
+
+        @media (width < 1024px) {
+            margin-left: 1.5rem;
+        }
+    }
+
+    svg {
+        transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+
+    &:hover {
+        span {
+            transform: translateX(10px);
+        }
+
+        .circle {
+            border: 1px solid #ffffff;
+            transform: scale(.9);
+        }
+
+        svg {
+            transform: scale(1.3);
+        }
+    }
+}

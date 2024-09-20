@@ -1,0 +1,11 @@
+.ebu_breadcrumb{
+  position: absolute;
+  font-size: 14px;
+  line-height: 1;
+  top: 24px;left: 0;
+  color: rgba($color: white, $alpha: .5);
+  a{
+    color: rgba($color: white, $alpha: 1);
+  }
+  svg{margin: 0 3px;}
+}

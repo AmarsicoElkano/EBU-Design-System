@@ -1,0 +1,72 @@
+.dropdown-list {
+  width: auto;
+  display: inline-block;
+  padding: 30px 40px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  transition: height 1s cubic-bezier(0.56, 0.23, 0, 1);
+  .button {
+    font-size: 16px;
+    svg {
+      fill: #1B4098;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 14px;
+    transition: opacity 0.5s cubic-bezier(0.56, 0.23, 0, 1) 0.5s;
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #EDEEEE;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #B4BFCA;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(#1B4098, 0.6);
+    }
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      padding-right: 10px;
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &:not(.open) {
+    transition-delay: 0.2s;
+    ul {
+      opacity: 0;
+      pointer-events: none;
+      transition-delay: 0s;
+    }
+  }
+  &.transparent {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+  &.scroll {
+    ul {
+      max-height: 215px;
+      overflow-y: auto;
+    }
+  }
+  @media (max-width: 1024px) {
+    .button {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 768px) {
+    .button {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+#popup-login{
+    position: absolute;
+    top:0;left: 0;
+    background-color: rgba($black, $alpha: .20);
+    background: rgba(119, 136, 157, 0.5);
+    backdrop-filter: blur(10px);
+    width: 100%;height: 100%;
+    z-index: 9991;
+    transition: ease-out .3s;
+    opacity: 0;
+    pointer-events: none;
+    &.open{
+        opacity: 1;
+        pointer-events: initial;
+    }
+    .login-form{
+        position: relative;
+        max-width: 516px;
+        box-sizing: border-box;
+        margin:120px auto 0;
+        padding: 40px;
+        border-radius: 5px;
+        background-color: $white;
+        .close-popup{
+            position: absolute;
+            right: 16px;top:16px;
+            cursor: pointer;
+        }
+        h2{color:$primary;margin-bottom: 18px;}
+        form{
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            label{
+                margin: 4px 0;
+                font-size: 14px;
+                color:$black;
+            }
+            .input-field{
+                outline: none;
+                border:1px solid #B7BCD6;
+                border-radius:6px;
+                height: 40px;
+                padding: 0 10px;
+                font-family: inherit;
+                font-size: 14px;
+                margin: 4px 0;
+                margin-bottom: 16px;
+            }
+            a.reset-pass{font-size: 12px;text-decoration: underline;line-height: 1.3;margin-bottom: 18px;}
+            .div-or{
+                margin: 18px 0;
+                font-weight: 600;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.related-events-section{
+  .related-cards-container {
+    display: flex;
+    margin-top: 40px;
+    flex-shrink: 0.9;
+    .ebu_cards {
+      width: calc(100% / 3 - 24px * 2 / 3);
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+  .swiper-pagination {
+    bottom: 0;
+    .swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      background: $gray;
+      opacity: 1;
+      &-active {
+        background: $blue;
+      }
+    }
+  }
+  @include respond-to('mobile') {
+    .related-cards-container {
+      margin: 40px 0;
+    }
+    .container + .container {
+      width: 100%;
+      overflow: hidden;
+    }
+    .related-cards-container {
+      padding: 0 15px;
+      .ebu_cards {
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

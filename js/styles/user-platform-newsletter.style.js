@@ -1,0 +1,1 @@
+import '../../sass/pages/user-platform-newsletter.page.scss'

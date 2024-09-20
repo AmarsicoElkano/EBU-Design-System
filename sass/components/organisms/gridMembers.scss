@@ -1,0 +1,55 @@
+.grid-members {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-self: stretch;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: solid rgba(0, 0, 0, 0.20) 1pt;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border-right: solid rgba(0, 0, 0, 0.20) 1px;
+    padding-right: 20px;
+    width: calc(20% - 40px);
+
+    .image img{display: block;max-width: 100%;}
+    .country {
+      color: $black;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .description {
+      color: $medium-blue;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: 16px;
+      min-height: 60px;
+      max-width: 174px;
+      margin-top: 10px;
+    }
+
+    @include respond-to('tablet'){
+      border-right: none;
+      padding-right: 00px;
+      width: 100%;
+      border-bottom: solid rgba(0, 0, 0, 0.20) 1px;
+      padding-bottom: 20px;
+
+      .description {width: 100%;min-height: 0;margin-bottom: 20px;}
+      .image{
+          max-height: 124px;
+          background-color: #F2F2F2;
+
+         img{display: block;max-width: 100%;max-height: 100%;margin: auto;mix-blend-mode: darken;}
+      }
+    }
+  }
+}

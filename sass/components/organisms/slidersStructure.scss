@@ -1,0 +1,65 @@
+.academy {
+  .swiper-pagination {
+    position: relative !important;
+  }
+}
+.slider-structure {
+   &_academy-faculty {
+     max-width: 200px;
+     text-align: center;
+     .name {
+       font-weight: 600;
+       font-size: 22px;
+     }
+     .position {
+       margin: auto;
+       max-width: 120px;
+       font-size: 12px;
+     }
+     .social {
+       font-size: 14px;
+     }
+     img {
+       max-width: 45%;
+       margin: auto;
+     }
+     @include respond-to('tablet-big') {
+        height: auto;
+        border-radius: 16px;
+        max-width: 272px;
+        margin: auto;
+        padding: 20px;
+        background-color: white;
+        img {
+          max-width: 80px;
+        }
+        .social {
+          margin-top:40px;
+          display: block;
+        }
+        .position {
+          max-width: 213px;
+        }
+     }
+   }
+  &_swiper {
+    overflow: hidden;
+      width: 100%;
+      height: 700px;
+      margin: auto !important;
+     .swiper-slide{
+       margin: auto !important;
+       height: calc((100% - 10px) / 2);
+       @include respond-to('tablet-big') {
+          height: auto;
+          width: auto;
+          margin: 0 !important;
+       }
+    }
+    @include respond-to('tablet-big') {
+      height: auto;
+      padding: 40px 0;
+      background-color: rgba($gray-02,1);
+    }
+  }
+}

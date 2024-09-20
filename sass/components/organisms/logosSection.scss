@@ -1,0 +1,18 @@
+.contentLogos {
+    max-width: 1200px;
+    position: relative;
+    h2{color:$medium-blue}
+    & .paragraphs{
+      max-width: 570px;
+      margin-bottom: 40px;
+    }
+    @media (max-width:900px) {
+        &:after{
+          content: url('/assets/img/hand-slide.svg');
+          position: absolute;
+          bottom: 4px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+    }
+  }

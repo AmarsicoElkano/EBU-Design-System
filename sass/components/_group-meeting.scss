@@ -1,0 +1,77 @@
+.group-meeting{
+  padding-left: 34px;
+  border-left: dashed $lightBlue 2px;
+  .accordeon {
+    padding-left: 64px;
+    position: relative;
+    margin-bottom: 16px;
+    background-color: $clear;
+    hr{margin:40px 0;}
+    h4{
+      font-weight: 700;
+      color: $blue;
+      line-height: 1.3;
+      font-size: 18px;
+      small{
+        font-size: inherit;
+        font-weight: 400;
+        color: $gray
+      }
+    }
+    .bt-accordeon{
+      cursor: pointer;
+      position: absolute;
+      padding: 17px;
+      top:0;left: 10px;
+      &:after{content: url(../../assets/img/accordeon-plus.svg);}
+    }
+    &--title{
+      cursor: pointer;
+      padding: 14px 0;
+      
+    }
+    &--main{
+      padding: 0;
+      padding-right: 60px;
+      overflow: hidden;
+      height: 0;
+    }
+    &.open{
+      padding-bottom: 30px;
+      .bt-accordeon:after{content: url(../../assets/img/accordeon-less.svg);}
+    }
+    // New Modules
+    .infoEvents{
+      display: flex;
+      align-items: center;
+      margin:20px 0 30px;
+      .dtl{
+        margin-right: 26px;
+        display: flex;
+        align-items: center;
+        img{margin-right: 10px;}
+      }
+    }
+  }
+  // Reset styles
+  .table-schudele.collapsable .row-title{margin:10px 0 20px;color:$black}
+  @include respond-to('mobile') {
+    padding-left: 20px;
+    .accordeon {
+      padding-left: 50px;
+      .bt-accordeon {
+        left: 0;
+      }
+      .infoEvents {
+        flex-direction: column;
+        align-items: flex-start;
+        .dtl {
+          margin-right: 0;
+          & + .dtl {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.sub-nav{
+    //border-bottom: 1px solid #D7DDE3;
+    padding-top: 26px;
+    margin-bottom: 30px;
+    button{
+      margin-right: 20px;
+      &::after{
+        margin-top: 17px;
+        transform: translateY(1px);
+      }
+    }
+    button:not(.active){
+      color: #77889D;
+      &::after{
+        opacity: 0;
+      }
+    }
+    position: sticky;
+    top:64px;z-index: 99;
+    background: #FFF;
+    .container{position: relative;}
+    .primary-button{
+      position: absolute;
+      right: 0;top: 0%;
+      transform: translateY(-50%);
+    }
+    @media (max-width:900px) {
+      overflow: scroll;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: flex;
+      margin-bottom: 0px;
+      border-bottom: none;
+      & > *{white-space: nowrap;}
+      .primary-button{
+        display: none;
+      }
+    }
+}

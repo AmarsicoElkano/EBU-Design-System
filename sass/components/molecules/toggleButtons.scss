@@ -1,0 +1,44 @@
+.toggle-button {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    color: #1B4098;
+    padding: 0;
+    background: transparent;
+    span {
+      margin-right: 15px;
+      font-weight: inherit;
+      color: $black;
+    }
+    .icon {
+      // width: 43px;
+      // height: 24px;
+      // background: #B4BFCA;
+      border-radius: 15px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 18px;
+        height: 18px;
+        background: white;
+        border-radius: 50%;
+        transition: background 1s cubic-bezier(0.56, 0.23, 0, 1), transform 1s cubic-bezier(0.56, 0.23, 0, 1);
+      }
+    }
+    &.active {
+      .icon {
+        &::after {
+          background: #1B4098;
+          transform: translateX(19px);
+        }
+      }
+    }
+}

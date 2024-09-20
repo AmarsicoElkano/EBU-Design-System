@@ -1,0 +1,50 @@
+.newsletter {
+  padding: 7px;
+  background: white;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+  input {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 0 16px;
+    height: 30px;
+    border: none;
+  }
+  &.box-newsletter {
+    @media (max-width: 900px) {
+      background: transparent;
+      flex-direction: column;
+      border-radius: 0px;
+      display: flex;
+      width: 100%;
+      input {
+        border-radius: 30px;
+        background: white;
+        display: block;
+        height: 48px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      & .primary-button {width: 100%;
+        span {font-weight: 700;}
+      }
+    }
+  }
+}
+.inputButtons{
+  .newsletter{ border:1px solid #b4bfca;padding: 4px;min-width: 280px;justify-content: space-between;}
+  label{
+     display: block;
+     margin-bottom: 10px;
+     color: #77889d;
+     font-size: 14px;
+     font-weight: 500;
+   }
+   .floating-button{width: 45px;height: 45px;}
+ }

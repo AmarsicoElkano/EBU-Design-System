@@ -1,0 +1,14 @@
+.text-length {
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+    font-weight: 400;
+  
+    @media screen and (max-width: 991px) {
+      max-width: 320px;
+    }
+  
+    @media screen and (max-width: 355px) {
+      max-width: 280px;
+    }
+  }

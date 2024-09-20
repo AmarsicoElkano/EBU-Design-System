@@ -1,0 +1,37 @@
+.stats-mobile{display: none;}
+@media (max-width:850px) {
+    .stats-mobile{
+        width: 100%;
+        position: relative;
+        top:12%;
+        padding-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        &_box{
+            display: flex;
+            align-items: center;
+            margin:5px 0;
+            width: 50%;
+            gap:10px;
+            svg{min-width: 48px;}
+            p{
+                margin: 0;
+            }
+        }
+        &_data{
+            font-weight: 600;
+            &-number{
+                font-size: 36px;
+                line-height: 1;
+                color: #ED0C6E;
+                &.green{
+                    color:#488936;
+                }
+                &.violet{
+                    color:#983795;
+                }
+            }
+            &-label{font-size:11px;color:#77889D;line-height: 1.1;}
+        }
+    }
+}

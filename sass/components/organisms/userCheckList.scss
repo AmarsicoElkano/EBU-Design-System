@@ -1,0 +1,36 @@
+.user-checklist {
+
+    .user-checklist__title {
+        color: $blue;
+        margin-bottom: 1.5rem;
+    }
+
+    .user-checklist__text {
+        margin-bottom: 1.5rem;
+        p {
+            margin: 0;
+            color: rgba($color: #000000, $alpha: .75);
+        }
+    }
+
+    .user-checklist__lists {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (width < 1025px) {
+            grid-template-columns: 1fr;
+        }
+
+        .column {
+            column-span: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            .checkbox {
+                margin-bottom: .75rem;
+            }
+        
+        }
+    }
+}

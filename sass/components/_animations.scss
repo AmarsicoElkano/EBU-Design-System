@@ -1,0 +1,6 @@
+[data-fade-in], .fade-in {
+  @include fade-in();
+}
+[data-fade-in-y], .fade-in-y {
+  @include fade-in-y();
+}

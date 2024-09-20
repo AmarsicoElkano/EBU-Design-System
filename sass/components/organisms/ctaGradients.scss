@@ -1,0 +1,45 @@
+#cta_gradients{
+    padding: 80px 0;
+    color: $white;
+    .grid__cards{margin-bottom: 0;}
+    .col{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        &_buttons{
+            padding-top: 40px;
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap:10px;
+            a{
+                padding: 0 22px;
+            }
+        }
+        &:not(:last-child){
+            padding-right: 20px;
+            border-right: 1px solid rgba($white, $alpha: .30);
+        }
+    }
+    @include respond-to('tablet'){
+        .col{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            &_buttons{
+                padding-top: 10px;
+                flex-direction: column;
+                padding-bottom: 10px;
+                a{
+                    width: 100%;
+                    margin-bottom: 14px;
+                }
+            }
+            &:not(:last-child){
+                padding-right: 10px;
+                border-right:none;
+                border-bottom: 1px solid rgba($white, $alpha: .30);
+            }
+        }
+    }
+}

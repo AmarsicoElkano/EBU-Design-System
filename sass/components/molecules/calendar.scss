@@ -1,0 +1,126 @@
+.calendar {
+  width: auto;
+  max-width: 190px;
+  display: inline-block;
+  padding: 30px 40px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  font-family: inherit;
+  user-select: none;
+  transition: height 1s cubic-bezier(0.56, 0.23, 0, 1);
+  .button {
+    font-size: 16px;  
+    svg {
+      fill: #1B4098;
+    }
+  }
+  .toggle-button span{
+    color:black;
+  }  
+  .box {
+    padding: 15px 20px;
+    margin-top: 14px;
+    border: 1px solid #D5D5D5;
+    border-radius: 5px;
+    transition: opacity 0.5s cubic-bezier(0.56, 0.23, 0, 1) 0.5s;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .year {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1;
+  }
+  .arrows {
+    display: flex;
+    align-items: center;
+  }
+  .arrow {
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 1s cubic-bezier(0.56, 0.23, 0, 1);
+    svg {
+      width: 30%;
+      fill: currentColor;
+    }
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    &:hover {
+      background: #F5F5F5;
+    }
+  }
+  .months {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .month {
+    width: calc(100% / 3);
+    padding: 6px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #A4A4A4;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: background 1s cubic-bezier(0, 0.48, 0, 1);
+    &.active {
+      color: #1B4098;
+      background: rgba(28, 64, 152, 0.1);
+    }
+    &:hover {
+      background: rgba(28, 64, 152, 0.1);
+    }
+  }
+  &:not(.open) {
+    transition-delay: 0.2s;
+    .box {
+      opacity: 0;
+      pointer-events: none;
+      transition-delay: 0s;
+    }
+  }
+  &.transparent {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+  @media (max-width: 1180px) {
+    max-width: 170px;
+    .box {
+      padding: 12px 15px;
+    }
+    .month {
+      font-size: 14px;
+      padding: 5px;
+      margin-bottom: 8px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .button {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 768px) {
+    .button {
+      font-size: 16px;
+    }
+  }
+}

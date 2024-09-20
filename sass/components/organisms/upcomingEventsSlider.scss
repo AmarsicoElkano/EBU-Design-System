@@ -1,0 +1,46 @@
+.upcomingEventsSlider {
+  overflow: hidden;
+  padding: 0 10px;
+  .swiper-wrapper {
+      display: flex;
+      justify-content: space-between;
+  }
+  .nav-section {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    .buttons {
+      display: flex;
+      column-gap: 10px;
+    }
+  }
+  .upcoming-button-next::after,
+  .upcoming-button-prev::after{display: none;}
+  .upcoming-button-next svg, .upcoming-button-prev svg{
+    width: auto;
+    height: auto;
+  }
+  .upcoming-button-next .arrow-button ,
+  .upcoming-button-prev .arrow-button {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border:none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    &:hover{
+      background-color: $light-blue;
+    }
+  }
+  .swiper-button-disabled{opacity: .4;pointer-events: none;}
+}
+
+@media only screen and (max-width: 1024px) {
+  .upcomingEventsSlider {
+    .nav-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

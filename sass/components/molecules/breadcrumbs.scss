@@ -1,0 +1,38 @@
+.breadcrumbs {
+  display: flex;
+  .breadcrumb {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    text-decoration: none;
+    display: block;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  
+    &.active {
+      font-weight: 600;
+      color: #000;
+    }
+  
+    span {
+      display: inline-flex;
+      align-items: baseline;
+      margin: 0 8px;
+    }
+  }
+  & > a:last-child{pointer-events: none;}
+
+  &.negative {
+    .breadcrumb {
+      color: rgba(255, 255, 255, 0.7) !important;
+
+      &.active {
+        font-weight: 600;
+        color: #fff !important;
+      }
+    }
+  }
+}

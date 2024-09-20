@@ -1,0 +1,55 @@
+
+@import '../variables.scss';
+@import '../util/mixins.scss';
+@import '../util/breakpoints.scss';
+@import '../components/header.scss';
+//FontAwesome 4.7.0
+@import '../font-awesome.min.css';
+
+.ebu_grid_cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  &--head{
+    grid-area: 1 / 1 / 2 / 4 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $blue;
+    letter-spacing: 1px;
+    font-size: 12px;
+    text-transform: uppercase;
+    .buttons{
+      a{
+        display: inline-block;
+        margin-left: 10px;
+        opacity: .3;
+        filter: brightness(.5);
+        &.active{
+          opacity: 1;
+          filter: brightness(1);
+        }
+      }
+    }
+  }
+  @include respond-to('mobile') {
+    display: flex;
+    flex-direction: column;
+    &--head {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+}
+.cta_loadmore{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 88px 0 104px;
+}
+@include respond-to('mobile') {
+  #main{background-color: #E5E5E5;}
+}

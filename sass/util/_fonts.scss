@@ -1,0 +1,10 @@
+
+@import 'mixins.scss';
+
+@include importFont('Proxima Nova', 'ProximaNova-Thin', 300);
+@include importFont('Proxima Nova', 'ProximaNova-Regular', 400);
+@include importFont('Proxima Nova', 'ProximaNova-Semibold', 600);
+@include importFont('Proxima Nova', 'ProximaNova-Bold', 700);
+@include importFont('Proxima Nova', 'ProximaNova-Extrabold', 800);
+@include importFont('Proxima Nova', 'ProximaNova-Black', 900);
+

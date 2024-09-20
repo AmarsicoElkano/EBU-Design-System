@@ -1,0 +1,60 @@
+.user-overview-card {
+    position: relative;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid $gray-02;
+    background: #ffffff;
+
+    @media (width < 1025px) {
+        padding: .75rem 1rem;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        @media (width < 1025px) {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .circle {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $gray-01;
+            border-radius: 100%;
+        }
+    }
+
+    .metric {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .number {
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        color: $blue;
+        padding-left: .5rem;
+        padding-right: .75rem;
+    }
+    
+    h6 {
+        color: $blue;
+    }
+}   

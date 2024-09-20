@@ -1,0 +1,51 @@
+.inputs-textarea {
+    position: relative;
+    width: 300px;
+    label{
+      display: block;
+      margin-bottom: 10px;
+      color: #77889D;
+      font-size: 14px;
+    }
+    textarea{
+      box-sizing: border-box;
+      appearance: none;
+      border:none;
+      margin:0;
+      padding: 0;
+      outline: none;
+      width: 100%;
+      font-family: inherit;
+      display: block;
+      height: 80px;
+      background: #FFFFFF;
+      border: 1px solid #B4BFCA;
+      padding: 15px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #122A64;    
+      & + span{
+        display: block;
+        position: relative;
+        text-align: right;
+        font-size: 12px;
+        margin-top:6px;
+        text-align: right;
+        opacity: 0;
+        transition: ease-in 0.3s;
+        opacity: 1;
+      }  
+      &:valid + span{
+        color: #00AD68;
+        &:before{content:attr(data-success);}
+      }
+      &:invalid + span{
+        color: #DD0031;
+        &:before{content:attr(data-error);}
+      }
+
+      &.no-rounded{border-radius: 0;}
+      &.rounded{border-radius: 4px;}
+      &.round{border-radius: 24px;}
+    }
+  }

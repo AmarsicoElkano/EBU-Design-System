@@ -1,0 +1,32 @@
+.accommodation {
+    &_grid-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 100px;
+      row-gap: 50px;
+    }
+
+    &_location-text {
+      width: 100%;
+      max-width:275px
+    }
+    &_map {
+      max-height: 500px;
+      width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .accommodation_location-text {
+      max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .accommodation_location-text {
+      max-width: 60%;
+    }
+  .accommodation_grid-column {
+    grid-template-columns: 1fr;
+  }
+}

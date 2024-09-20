@@ -1,0 +1,28 @@
+.scroll-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 56px;
+  height: 56px;
+  background: $blue;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .4s ease;
+  border: 1px solid #FFF;
+  &.dark {
+    background: #FFF;
+    transition: all .4s ease;
+    svg {
+      path {
+        fill: $blue;
+      }
+    }
+  }
+  @include respond-to('mobile') {
+    display: none;
+  }
+}

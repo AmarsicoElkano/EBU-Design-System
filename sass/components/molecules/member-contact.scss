@@ -1,0 +1,14 @@
+.members-section{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  .subtitle{color:#1C4098}
+  .paragraphs{max-width: 600px;}
+  svg.iso-logo{
+    position: absolute;
+    right: 10%;
+    top:50%;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+}

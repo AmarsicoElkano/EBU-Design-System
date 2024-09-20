@@ -1,0 +1,201 @@
+@import './variables.scss';
+@import './util/normalize.scss';
+@import './util/mixins.scss';
+@import './util/breakpoints.scss';
+@import './util/grid.scss';
+@import './util/fonts.scss';
+@import './util/typography.scss';
+@import './util/animations.scss';
+@import './components/atoms';
+@import './components/molecules';
+@import './components/organisms';
+
+@import './util/swiper-bundle.min.scss';
+@import './util/nogl.scss';
+@import './components/forms.scss';
+@import './components/footer.scss';
+@import './components/hero.scss';
+@import './components/buttons.scss';
+@import './components/breadcrumbs.scss';
+@import './components/filters.scss';
+@import './components/cards.scss';
+@import './components/nav.scss';
+@import './components/aside.scss';
+@import './components/schudele.scss';
+@import './components/speakers.scss';
+@import './components/documents.scss';
+@import './components/popup.scss';
+@import './components/video-preview.scss';
+@import './components/previous-events.scss';
+@import './components/datepicker.scss';
+@import './components/group-meeting.scss';
+@import './components/animations.scss';
+@import './components/scroll-up.scss';
+
+*{
+  font-smooth: almays;
+  text-shadow: 0px 0px 1px transparent;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+@-moz-document url-prefix() {
+  body {
+    font-weight: 400 !important;
+  }
+}
+body, html{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: $black;
+  background: white;
+  scroll-behavior: smooth;
+}
+.blue-section{
+  background-color: $medium-blue;
+  color: white;
+  padding: 120px 0;
+}
+.white-section{
+  background-color:white;
+  padding: 120px 0;
+}
+#page{
+  width: 100%;
+}
+.flex{
+  display: flex;
+  @include respond-to('tablet-big') {
+    display: block;
+  }
+  &.center{
+    align-items: center;
+    justify-content: center;
+  }
+}
+button, a{
+  &, &:focus{
+    outline: none !important;
+  }
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+svg {
+  fill: currentColor;
+}
+.fade-in{
+  @include fade-in();
+}
+.fade-in-y {
+  @include fade-in-y();
+}
+.underline {
+  @include underline();
+}
+.no-events {
+  &, * {
+    pointer-events: none !important;
+  }
+}
+.no-transition {
+  &, * {
+    transition: none !important;
+  }
+}
+.no-transform {
+  transform: none !important;
+}
+.no-opacity {
+  opacity: 0 !important;
+}
+.no-overflow {
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+}
+.no-animation {
+  animation: none !important;
+}
+.vh100 {
+  width: 100vw;
+  height: 100vh;
+  height: $vh100;
+}
+[data-bg-img] {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+[data-scroll-section]:not([data-scroll-sticky]) {
+  will-change: transform;
+}
+[data-scroll-speed] {
+  will-change: transform;
+}
+h1,h2,h3,h4,h5,h6{margin: 0;}
+.gradient-dark_blue{
+  background-size: 100% 100%;
+  background-position: 0px 0px,0px 0px,0px 0px;
+  background-image: radial-gradient(50% 65% at 0% 100%, #2073a5 1%, #408CBA00 73%),radial-gradient(50% 65% at 100% 0%, #2073a5 1%, #408CBA00 80%),radial-gradient(75% 75% at 50% 50%, #122A64 0%, #122A64 100%);
+}
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+  .text-#{$color} {
+    color: $value;
+  }
+  .border-#{$color} {
+    border-color: $value;
+  }
+}
+.padding-top-bottom {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include respond-to('mobile'){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.two-cols{
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  gap:100px;
+  &.aside-col{
+    aside{
+      width: 380px;
+      min-width: 380px;
+      img{display: block;width: 100%;}
+    }
+  }
+  @media (max-width:900px) {
+    flex-direction: column;
+    gap: 40px;
+    &.aside-col{
+      aside{
+        width: 100%;
+        min-width: 0px;
+      }
+    }
+  }
+}
+@media (max-width:900px) {
+  #embarking{
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, .7);
+      top: 0;left: 0;
+      z-index: 0;
+    }
+    .small-container{z-index: 1;position: relative;}
+  }
+}

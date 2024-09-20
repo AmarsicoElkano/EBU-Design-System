@@ -1,0 +1,118 @@
+.table {
+    width: 100%;
+    padding: 80px 0;
+    position: relative;
+  &.bordered {
+    td, th {
+      border: 0.6px solid #77889D;
+      padding: 10px 5px;
+      vertical-align: top;
+      width: auto !important;
+      .td-content{
+        li {
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+    .header {
+      display: none;
+    }
+    td {
+      padding-bottom: 50px;
+    }
+    th {
+      background: $medium-blue;
+      color: #ffffff;
+      width: 100%;
+    }
+    @media screen and (max-width: 900px) {
+      table thead {
+        visibility: hidden;
+      }
+
+      .header {
+        td, th {
+          border: none;
+        }
+        display: block;
+        visibility: visible;
+      }
+
+      table td, tr, th {
+        padding-right: 25px;
+        display: block;
+        &:not(:last-child) {
+          border-bottom: 0 !important;
+        }
+      }
+    }
+    &:after{
+      content: none;
+    }
+  }
+    @media (max-width:900px) {
+        position: relative;
+        &:after{
+          content: url('../../assets/img/hand-slide.svg');
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+    }
+    .title {
+      margin-bottom: 24px;
+    }
+    .description, table {
+      max-width: 800px;
+    }
+    table {
+      width: auto;
+      border-collapse: collapse;
+      border-spacing: 0;
+      &:not(:first-child) {
+        margin-top: 32px;
+      }
+    }
+    th, td {
+      max-width: 300px;
+      text-align: left;
+      padding: 24px 0;
+      &:not(:last-child) {
+        padding-right: 64px;
+      }
+    }
+    th {
+      font-weight: 600;
+      padding-bottom: 0;
+      color: #1B4098;
+    }
+    td {
+      border-bottom: 0.6px solid #77889D;
+      .td-content {
+        a {
+          color: #1B4098;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &.gray {
+      background: #D7DDE3;
+    }
+    &:not(.wrap-container) {
+      .container {
+        width: 100% !important;
+        max-width: none !important;
+      }
+    }
+    @media (max-width:900px) {
+      &-content{
+        overflow: scroll;
+        padding-bottom: 20px;
+      }
+    }
+}

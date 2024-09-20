@@ -1,0 +1,255 @@
+.form-row {
+    display: flex;
+    & + & {
+        margin-top: 24px;
+    }
+    & + h2 {
+        margin-top: 72px;
+    }
+    @include respond-to('tablet') {
+        flex-direction: column;
+        &.row {
+            flex-direction: row;
+            .form-column {
+                & + .form-column {
+                    margin: 0 0 0 16px;
+                }
+            }
+        }
+    }
+}
+.form-column {
+    flex: 1;
+    max-width: calc(50% - 16px / 2);
+    & + & {
+        margin-left: 16px;
+    }
+    &.small {
+        max-width: 122px;
+    }
+    &.large {
+        max-width: 100%;
+    }
+    .label {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        display: block;
+        margin-bottom: 9px;
+        a {
+            color: $blue;
+        }
+        &.big {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+    }
+    @include respond-to('tablet') {
+        max-width: 100%;
+        & + & {
+            margin: 24px 0 0 0;
+        }
+    }
+}
+.custom-form {
+    position: relative;
+    input[type=text],
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    textarea {
+        border: 1px solid $gray;
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        padding: 7px 20px;
+        border-radius: 4px;
+    }
+    select {
+        border: 1px solid $gray;
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        padding: 7px 20px;
+        border-radius: 4px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &.with-icon {
+        &::after {
+            position: absolute;
+            bottom: 27px;
+            right: 17px;
+            width: 10px;
+            height: 5px;
+            background-size: 10px 5px;
+        }
+    }
+    &.sort-down {
+        &::after {
+            content: url('../../assets/img/sort-down-solid.svg');
+            pointer-events: none;
+        }
+    }
+    input[type=checkbox] {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        & + label {
+	        position: relative;
+            display: inline-block;
+            padding-left: 30px;
+            > span {
+                width: 14px;
+                height: 14px;
+                display: flex;
+                justify-content: center;
+                border: 2px solid $blue;
+                margin-right: 15px;
+                border-radius: 1px;
+                position: absolute;
+                top: 1px;
+                left: 0;
+            }
+        }
+        &:checked + label > span {
+            &::after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                top: 2px;
+                left: 2px;
+                background: $blue;
+            }
+        }
+    }
+    label {
+        &.switch {
+            position: relative;
+            display: inline-block;
+            width: 43px;
+            height: 24px;
+            margin-left: 30px;
+            margin-bottom: 1px;
+            input {
+                display: none;
+                &:checked + .slider {
+                    background-color: $blue;
+                    &::before {
+                        -webkit-transform: translateX(19px);
+                        -ms-transform: translateX(19px);
+                        transform: translateX(19px);
+                    }
+                }
+                &:focus + .slider {
+                    box-shadow: 0 0 1px $blue;
+                }
+            }
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $gray;
+                -webkit-transition: .4s;
+                transition: .4s;
+                border-radius: 50px;
+                &::before {
+                    position: absolute;
+                    content:"";
+                    height: 18px;
+                    width: 18px;
+                    left: 3px;
+                    top: 3px;
+                    border-radius: 50%;
+                    background-color: white;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                }
+            }
+        }
+    }
+    &.align-items {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.switches-container {
+    width: 132px;
+    position: relative;
+    display: flex;
+    padding: 0;
+    position: relative;
+    background: transparent;
+    border: 1px solid $gray;
+    line-height: 40px;
+    border-radius: 40px;
+    margin-top: 12px;
+    input {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+    }
+    label {
+        width: 50%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        cursor: pointer;
+        color: $gray;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .switch {
+        border-radius: 40px;
+        background: $blue;
+        height: 100%;
+        &-wrapper {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            padding: 3px;
+            z-index: 3;
+            transition: transform .5s cubic-bezier(.77, 0, .175, 1);
+        }
+        div {
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            display: block;
+            color: #FFF;
+            transition: opacity .2s cubic-bezier(.77, 0, .175, 1) .125s;
+            will-change: opacity;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+    input:nth-of-type(1):checked~.switch-wrapper {
+        transform: translateX(0%);
+    }
+    input:nth-of-type(2):checked~.switch-wrapper {
+        transform: translateX(100%);
+    }
+    input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {
+        opacity: 1;
+    }
+    input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) {
+        opacity: 1;
+    }
+}

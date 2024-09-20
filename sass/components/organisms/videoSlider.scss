@@ -1,0 +1,82 @@
+.videoSlide {
+  width: 100%;
+  position: relative;
+
+  &_swiper {
+    width: calc(100% - 200px);
+    padding: 0 0px;
+    position: relative;
+    box-sizing: border-box;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  figure {
+    margin-bottom: 10px;
+    border-radius: 6px;
+    padding-top: 0;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+
+    svg {
+      opacity: .5;
+      transition: .5s;
+    }
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1px;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 100%;
+    z-index: 9;
+  }
+
+  @media (max-width: 1000px) {
+    &_swiper {
+      width: calc(100% - 20px);
+      &::after{
+        content: url('../../assets/img/hand-slide.svg');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 30px;
+      }
+    }
+    &__nav {
+      display: none;
+      & .arrow-button {
+        max-height: 5px;
+        max-width: 5px;
+      }
+    }
+  }
+}
+
+.videoSlide {
+  .button-video-prev .arrow-button ,
+  .button-video-next .arrow-button{
+    min-width: 40px;
+    min-height: 40px;
+    width: 40px;
+    height: 40px;
+  }
+  .swiper-slide {
+    cursor: pointer;
+
+    h2 {
+      font-size: min(14px, 90%) !important;
+      color: $medium-blue;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.documents {
+  max-width: 450px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 40px 32px;
+
+  &_text {
+    font-size: 18px;
+  }
+
+  &_small-blue-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: $light-blue;
+  }
+
+  .titles {
+    margin-bottom: 20px;
+  }
+
+  &.blue {
+    background: #1B4098;
+  }
+
+  &.grey {
+    background: #F8F9FA;
+  }
+
+  .textarrow-button {
+    margin-top: 22px;
+  }
+
+  .links.background ul {
+    padding: 0;
+  }
+
+  @media (max-width: 900px) {
+    padding: 30px;
+  }
+}

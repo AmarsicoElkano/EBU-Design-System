@@ -1,0 +1,33 @@
+.brand-symbol {
+  max-width: 180px;
+  display: inline-block;
+
+  & > svg {
+    fill: $medium-blue;
+    width: 100%;
+  }
+
+  &.extra-small {
+    max-width: 75px;
+  }
+
+  &.small {
+    max-width: 120px;
+  }
+
+  &.medium {
+    max-width: 210px;
+  }
+
+  &.large {
+    max-width: 320px;
+  }
+
+  &.black svg {
+    fill: #000
+  }
+
+  &.white svg {
+    fill: #FFF
+  }
+}

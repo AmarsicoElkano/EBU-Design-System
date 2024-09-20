@@ -1,0 +1,85 @@
+.banner-section{
+  padding: 73px 0;
+  position: relative;
+  h2 {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 48px;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  .small-container {
+    position: relative;
+    z-index: 1;
+  }
+  .ebu_button, .newsletter {
+    margin-top: 48px;
+  }
+  .newsletter {
+    width: 304px;
+    margin-top: 24px;
+    position: relative;
+    input{
+      width: 100%;
+      font-size: 14px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 25px;
+      padding-left: 18px;
+      background: white;
+      box-shadow: none;
+    }
+    button{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 123px;
+      right: 8px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      background: $blue;
+      cursor: pointer;
+      border-radius: 18px;
+      color: white !important;
+    }
+  }
+  &.banner-section-light-blue{
+    background: $lightBlue;
+    color: $darkBlue;
+  }
+  &.banner-section-dark-blue{
+    background: $darkBlue;
+    color: white;
+    &::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background-image: url('../../assets/img/land.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+    }
+  }
+  &.minheight{padding: 120px 0;}
+  @include respond-to('mobile') {
+    .small-container {
+      padding: 0 20px;
+    }
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 34px;
+      letter-spacing: 0px;
+    }
+    .newsletter {
+      width: 100%;
+    }
+  }
+}

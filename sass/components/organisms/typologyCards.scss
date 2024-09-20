@@ -1,0 +1,302 @@
+.CardTypology {
+  width: 100%;
+  max-width: 280px;
+
+  &.upcoming-events {
+    max-width: unset !important;
+    .CardTypology_main{
+      padding-bottom: 50px;
+    }
+    .CardTypology_footer{
+      position: absolute;
+      right: 24px;
+      bottom:20px;
+    }
+  }
+
+  &.max-width {
+    max-width: 320px;
+  }
+
+  border-radius: 6px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+
+  &.academy-card {
+    max-width: unset;
+    height: auto;
+    border-radius: 0 6px 6px 0;
+    border-left: 2px solid #873299;
+    &.no-border-left {
+      border-radius: 6px;
+      border-left: unset !important;
+    }
+
+    &.max-width-auto {
+      max-width: 384px;
+    }
+
+    &.four-columns {
+      width: 384px;
+      @include respond-to('mobile-medium') {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &.three-columns {
+      width: 300px;
+      @include respond-to('mobile-medium') {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .status {
+      color: #0BBBEF;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      position: absolute;
+      right: 7px;
+      margin-top: -30px;
+    }
+
+    .subtitle {
+      color: #1B4098;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    figure {
+      height: 146px;
+    }
+
+    &.CardTypology_date {
+      font-size: 12px;
+      min-width: 140px;
+      color: rgba($color: #000000, $alpha: .85);
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 14px;
+      }
+    }
+
+    & .floatingButton:hover {
+      background: #1B4098 !important;
+      cursor: pointer;
+    }
+  }
+
+  &.library-card {
+    max-width: 384px;
+
+    & .basicCards_tag {
+      font-size: 12px;
+      width: auto;
+    }
+
+    & .CardTypology_main {
+      padding: 22px;
+    }
+
+    & .CardTypology_title {
+      color: #1B4098;
+    }
+
+    & .CardTypology_floatTags {
+      margin: 16px;
+    }
+  }
+
+  &.events-card {
+    max-width: 384px;
+    border-bottom: 6px solid #00AD68;
+
+    &.blue {
+      border-color: #1B4098 !important;
+    }
+  }
+
+  &.news-card {
+    & .CardTypology_main {
+      padding: 18px;
+    }
+
+    & .CardTypology_title {
+      color: #1B4098;
+    }
+  }
+
+  &_image {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &.height-big {
+      height: 216px !important;
+    }
+
+    & .ico_video {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer
+    }
+
+    &.academy {
+      height: 194px;
+      min-width: 275px;
+      border-radius: 6px 0px 0px 0px;
+    }
+
+    &.home-card {
+      border-bottom: 2px solid #1B4098;
+      height: 250px;
+
+      &.card-specifics {
+        height: 216px !important;
+      }
+    }
+
+    &.academy-card {
+      height: 146px;
+    }
+
+    &.events-card,
+    &.library-card {
+      height: 216px;
+    }
+
+    &.news-card {
+      height: 175px;
+      border-bottom: 2px solid #1B4098;
+    }
+  }
+
+  &_main {
+    padding: 40px 24px 20px;
+    position: relative;
+    background: white;
+    a {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      margin: 5px;
+    }
+
+    .chip {
+      margin-top: -50px;
+      position: absolute;
+      width: 180px;
+      height: 36px;
+      flex-shrink: 0;
+      border-radius: 18px;
+      background: #FFF;
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10);
+      &.small {
+        width: 140px !important;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        margin: 5px 0 15px 15px;
+
+        .calendar-icon {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &.upcoming-events {
+      min-height: 300px;
+    }
+
+    &.bg-blue {
+      background: #1B4098;
+      color: white;
+
+      .CardTypology_tags {
+        background: transparent !important;
+        color: white !important;
+        border: 1px solid rgba(255, 255, 255, .5)
+      }
+    }
+
+    .label-invitation {
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: white;
+      position: absolute;
+      top: -30px;
+      right: 20px;
+    }
+  }
+
+  &_footer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.margin {
+      margin-top: 64px;
+    }
+  }
+
+  &_date {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    background: #FFFFFF;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 28px;
+    padding: 9px 18px;
+    color: #1B4098;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &_tag {
+    margin: 10px 0;
+  }
+
+  &_subtitle {
+    opacity: .25;
+    margin-bottom: 4px;
+    font-size: 12px !important;
+    margin-top: 0;
+  }
+
+  &_title {
+    margin-bottom: 8px;
+  }
+
+  &_paragraph {
+    opacity: .85;
+    margin-bottom: 10px;
+    font-size: 14px;
+
+    &.margin {
+      margin-bottom: 40px;
+    }
+  }
+
+  .caption {
+    font-size: 12px;
+  }
+
+  @media(max-width: 800px) {
+    max-width: 100%;
+  }
+}

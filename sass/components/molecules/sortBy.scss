@@ -1,0 +1,19 @@
+.sortby{
+    min-width: 150px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    button{
+      border: none;
+      pointer-events: none;
+      background: transparent;
+      padding: 0;
+      margin:10px;
+      color: #1B4098;
+      cursor: pointer;
+      &.disabled{
+        color:#CCCCCC;
+        pointer-events: initial;
+      }
+    }
+}

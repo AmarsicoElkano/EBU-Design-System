@@ -1,0 +1,72 @@
+.navTabs {
+    border-radius:40px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(119, 136, 157, 0.2);
+    display: flex;
+    width: 100%;
+    & .primary-button{
+      width: 16.66%;
+      &:not(:first-child){
+        border-left:1px solid rgba(119, 136, 157, 0.2)
+      }
+      &.active{
+        background-color: #1B4098;
+        color: #fff;
+      }
+    }
+    &.small{
+      max-width: 950px;
+      & .primary-button{
+        width: 20%;
+        max-width: 196px;
+      }
+    }
+    &.dark{
+      & .primary-button{
+        &:not(:first-child){
+          border-left:1px solid #1B4098;
+        }        
+        &.active{
+          background-color: #0BBBEF;
+          color: #000;
+        }
+      }
+    }
+    @media (max-width:900px) {
+      overflow-x: scroll;
+      box-shadow:none;
+      border-radius:0px;
+      padding-bottom: 20px;
+      & .primary-button{
+        width: auto;
+        white-space: nowrap;
+        padding: 10px 0px;
+        margin-left: 20px;
+        border-bottom: 2px white solid;
+        &:not(:first-child){
+          border-left:0px;
+        }
+        &.active{
+          background-color: white;
+          color: #1B4098;
+          border-bottom: 2px #1B4098 solid;
+        }
+      }
+
+      &.dark{
+        & .primary-button{
+          color:white;
+          background-color:transparent ;
+          border-bottom: 2px transparent solid;
+          &:not(:first-child){
+            border-left:0px;
+          }
+          &.active{
+            background-color:transparent ;
+            color: #0BBBEF;
+            border-bottom: 2px #0BBBEF solid;
+          }
+        }
+      }
+    }
+  }

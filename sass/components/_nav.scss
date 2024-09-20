@@ -1,0 +1,49 @@
+@import '../variables.scss';
+
+.ebu_secundary_nav{
+  position: sticky;
+  background-color: white;
+  top:0;
+  border-bottom: 1px solid #B4BFCA;
+  z-index: 2;
+  &--item{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+    position: relative;
+    color:$navGray;
+    font-size: 16px;
+    font-weight: 600;
+    &:before{
+      content: '';
+      width: 100%;
+      height: 2px;
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      opacity: 0;
+    }
+    &.active{
+      color: $black;
+      &::before{opacity: 1;}
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .container{
+    display: flex;
+    align-items: center;
+  }
+  @include respond-to('mobile') {
+    &--item {
+      flex-shrink: 0;
+    }
+    .container {
+      overflow-x: scroll;
+      overflow-y: hidden
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.documents{
+  list-style: none;
+  margin:20px 0;
+  li{
+    position: relative;
+    padding-left: 26px;
+    font-size: 18px;
+    line-height: 1.45;
+    margin-bottom: 24px;
+    svg{
+      position: absolute;
+      left: 0;top: 5px;
+    }
+    small{
+      color: $lightBlue;
+      // display: block;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    &.documents-members {
+      svg {
+        path {
+          fill: $gray;
+          stroke: $gray;
+        }
+      }
+    }
+  }
+}

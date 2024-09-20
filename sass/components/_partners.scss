@@ -1,0 +1,21 @@
+.partners {
+  display: flex;
+  align-items: center;
+  .partner {
+    width: auto;
+    height: 60px;
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+#partners {
+  .container + .container {
+    overflow: hidden;
+  }
+}

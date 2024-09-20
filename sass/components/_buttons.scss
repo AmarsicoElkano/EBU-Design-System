@@ -1,0 +1,144 @@
+.ebu_button{
+  border-radius: 50px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 30px;
+  cursor: pointer;
+  position: relative;
+  transition: all .6s cubic-bezier(.55,0,.1,1);
+  &.bg{
+    color:#fff;
+    &.blue {
+      background-color: $blue;
+    }
+    &.lightblue {
+      background-color: $lightBlue;
+    }
+    &.gray {
+      background-color: $gray;
+    }
+    &.white {
+      background-color: white;
+      color: $blue
+    }
+  }
+  &.outline{
+    border: 2px solid $blue;
+    color:$blue;
+    &.white {
+      border-color: white;
+      color: white;
+    }
+  }
+  &:hover {
+    background-color: $lightBlue;
+    border-color: $lightBlue;
+    color: #FFF;
+    transition: all .6s cubic-bezier(.55,0,.1,1);
+    svg {
+      path {
+        fill: #FFF;
+        transition: all .6s cubic-bezier(.55,0,.1,1);
+      }
+    }
+    &.outline{
+      border: 2px solid $lightBlue;
+      color: #FFF;
+      &.white {
+        border-color: $lightBlue;
+        color: #FFF;
+      }
+    }
+    &.blue {
+      background-color: $lightBlue;
+      color: #FFF;
+    }
+    &.lightblue {
+      background-color: $lightBlue;
+      color: #FFF;
+    }
+    &.gray {
+      background-color: $lightBlue;
+      color: #FFF;
+    }
+    &.white {
+      background-color: $lightBlue;
+      color: #FFF;
+    }
+  }
+  svg, img {
+    margin-right: 10px;
+  }
+  &.big {
+    height: 56px;
+    padding: 0 70px;
+  }
+  &:disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: .35;
+    &.bg{
+      color:#fff;
+      &.blue{background-color: $gray;}
+      &.lightblue{background-color: $gray;}
+      &.gray{background-color: $gray;}
+      &.white {
+        color: $darkBlue;
+        background-color: #C5C5C5;
+        opacity: 1;
+      }
+    }
+  }
+  &-live {
+    background-color: $yellow;
+    position: relative;
+    padding-left: 50px;
+    &.outline {
+      border-color: $yellow;
+      color: $black;
+    }
+    .icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 15px;
+      width: 30px;
+      height: 30px;
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      &.left {
+        transform: rotate(-90deg) translateY(-25%);
+      }
+      &.right {
+        transform: rotate(90deg) translateY(-25%);
+      }
+    }
+    @include respond-to('mobile') {
+      padding-left: 50px !important;
+    }
+  }
+  @include respond-to('mobile') {
+    min-height: 40px;
+    padding: 10px 30px;
+    height: auto;
+    &.big {
+      height: 40px;
+      max-width: 48%;
+    }
+  }
+}
+.ebu-link {
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  &.lightblue {
+    color: $lightBlue;
+  }
+}

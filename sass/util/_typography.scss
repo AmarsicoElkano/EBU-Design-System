@@ -1,0 +1,76 @@
+body {
+  font-family: $font-normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.44;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, .h7 {
+  font-weight: 600;
+  line-height: 1.24;
+  margin: 0;
+  &.blue{
+    color:#1B4098;
+  }
+  &.white{
+    color:white;
+  }
+  &.lightBlue{
+    color:#0BBBEF
+  }
+}
+.h1 {
+  font-size: 42px;
+}
+.h2 {
+  font-size: 34px;
+  line-height: 1.41;
+}
+.h3 {
+  font-size: 28px;
+  line-height: 1.29;
+}
+.h4 {
+  font-size: 26px;
+  line-height: 1.31;
+}
+.h5 {
+  font-size: 22px;
+  line-height: 1.36;
+}
+.h6 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.h7{
+  font-size: 18px;
+  line-height: 1.2;
+}
+.s1 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.43;
+  text-transform: uppercase;
+}
+.p2 {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.c1 {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.33;
+}
+.type-button {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 600;
+}
+.medium-bold {
+  font-weight: 400 !important;
+}
+.semi-bold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}

@@ -1,0 +1,49 @@
+.main-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 64px;
+  align-self: stretch;
+  background-image: url('../../assets/img/hero-gradient.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  margin: auto;
+  &.height-medium {
+    min-height: 65vh;
+    padding-top: 40px;
+  }
+  &.height-small {
+    height: 40vh;
+    min-height: 380px;
+    padding-top: 40px;
+  }
+  @include respond-to('tablet'){
+    padding: 20px 0;
+    padding-top: 50px;
+    &.height-medium {
+      height: auto;
+      min-height: 360px;
+    }
+    &.height-small {
+      height: auto;
+      min-height: 280px;
+    }
+    .nobordermobile{border-bottom: none !important;}
+    // fixing
+    .pre-footer__left,
+    .pre-footer__right{padding-left: 0;padding-right: 0;} 
+    .h1{font-size: 27px;}
+    .pre-footer__left.text-left{
+      p{max-width: 100% !important;font-size: 16px;}
+    }
+    .pre-footer__right{
+      .titles.h5{font-size: 18px;}
+      .component-variation, .filled-button {
+        width: 100%;
+      }
+    }
+
+  }
+}
