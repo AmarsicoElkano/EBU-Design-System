@@ -1,1 +1,0 @@
-import '../../sass/pages/user-platform-my-details.page.scss'

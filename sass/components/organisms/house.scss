@@ -1,0 +1,63 @@
+@import "../../variables.scss";
+
+.house {
+	min-height: 822px;
+
+	.house_header {
+		width: 100%;
+		height: auto;
+		padding: 40px 0;
+		border-radius: 100px 100px 0 0;
+		background: $linear-yellow;
+		text-align: center;
+	}
+
+	h4,
+	.ebu-rich-text {
+		font-size: 14px;
+	}
+
+	.three-col {
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+		padding: 5px 0;
+
+		.col {
+			background-color: #f8f9fa;
+			padding: 20px 40px 40px 40px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		@include respond-to("tablet-big") {
+			flex-direction: column;
+			.col {
+				padding: 10px 16px;
+			}
+		}
+	}
+
+	.banner {
+		background-color: #d7dde3;
+		border-radius: 8px;
+		padding: 40px 20px;
+
+		@include respond-to("tablet-small") {
+			padding: 20px 0px;
+		}
+
+		.banner-text {
+			max-width: 805px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+
+			@include respond-to("tablet-small") {
+				text-align: left;
+				padding: 0 20px;
+			}
+		}
+	}
+}

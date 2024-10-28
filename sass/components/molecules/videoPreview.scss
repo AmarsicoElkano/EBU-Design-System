@@ -1,32 +1,41 @@
 .video-preview {
-    position: relative;
-    max-width: 800px;
-  
-    &.option-3 {
-      max-width: 332px;
-    }
-  
-    img {
-      width: 100%;
-    }
-  
-    .play-button {
-      cursor: pointer;
-      position: absolute;
-  
-      &.option-1 {
-        top: calc(50% - 41px);
-        left: calc(50% - 41px);
-      }
-  
-      &.option-2 {
-        top: calc(50% - 24px);
-        left: calc(50% - 24px);
-      }
-  
-      &.option-3 {
-        top: calc(50% - 20px);
-        left: calc(50% - 20px);
-      }
-    }
-  }
+	position: relative;
+	max-width: 800px;
+	margin: auto;
+
+	&.option-2 {
+		padding-top: 20px;
+		max-width: 1120px;
+	}
+
+	&.option-3 {
+		max-width: 332px;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.play-button {
+		cursor: pointer;
+		position: absolute;
+
+		&.option-1 {
+			top: calc(50% - 41px);
+			left: calc(50% - 41px);
+		}
+
+		&.option-2 {
+			top: calc(50% - 24px);
+			left: calc(50% - 24px);
+			circle {
+				fill: black;
+			}
+		}
+
+		&.option-3 {
+			top: calc(50% - 20px);
+			left: calc(50% - 20px);
+		}
+	}
+}

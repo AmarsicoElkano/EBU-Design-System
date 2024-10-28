@@ -1,1 +1,0 @@
-import '../../sass/pages/user-platform-events.page.scss'

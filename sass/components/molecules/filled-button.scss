@@ -1,179 +1,272 @@
-.filled-button, .ghost-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  border: none;
-  background: transparent;
-  padding: 0 33px;
-  height: 40px;
-  box-sizing: border-box;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1;
-  cursor: pointer;
-  &::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    border-radius: 50px;
-    box-sizing: border-box;
-    background: $primary;
-    box-sizing: border-box;
-    transition: 1s $curve;
-  }
-  span, svg {
-    color: $white;
-    z-index: 1;
-  }
-  & > svg {
-    margin-left: 22px;
-  }
-  span {
-    display: inline-block;
-    font-size: inherit;
-    font-weight: inherit;
-    position: relative;
-    z-index: 1;
-    pointer-events: none;
-    transition: transform 1s $curve, opacity 1s $curve;
-    &:last-child:not(:first-child) {
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      opacity: 0;
-      transform: translate(-50%, 150%);
-    }
-  }
-  &-icon {
-    width: auto;
-    height: 1.5em;
-    flex-shrink: 0;
-    display: inline-flex;
-    margin-left: 22px;
-    position: relative;
-    z-index: 1;
-    svg, img {
-      height: 100%;
-      fill: currentColor;
-    }
-  }
-  &[data-direction="up"] {
-    .filled-button-icon, .ghost-button-icon {
-      transform: rotate(-90deg);
-    }
-  }
-  &[data-direction="down"] {
-    .filled-button-icon, .ghost-button-icon {
-      transform: rotate(90deg);
-    }
-  }
-  &[data-direction="left"] {
-    .filled-button-icon, .ghost-button-icon {
-      transform: rotate(180deg);
-    }
-  }
-  &.with-icon {
-    padding-left: 30px;
-    padding-right: 30px;
-    .filled-button-icon, .ghost-button-icon {
-      height: 1em;
-    }
-  }
-  &.download {
-    .filled-button-icon, .ghost-button-icon {
-      svg {
-        overflow: visible;
-        path {
-          transform-origin: 50% 50%;
-          transition: transform 1s $curve;
-        }
-      }
-    }
-  }
-  &.reverse {
-    flex-direction: row-reverse;
-    .filled-button-icon, .ghost-button-icon {
-      margin-left: 0;
-      margin-right: 15px;
-    }
-  }
-  &.large {
-    height: 56px;
-    padding: 0px 42px;
-    @include respond-to('mobile-medium') {
-      margin-top: 20px;
-      margin-left: unset !important;
-    }
-  }
-  &.small {
-    height: 24px;
-    font-size: 12px;
-    padding: 0px 28px;
-    .filled-button-icon{margin-left: 12px;}
-  }
-  &.disabled {
-    color: $white;
-    pointer-events: none !important;
-    &::before {
-      background: $gray-03;
-    }
-  }
-  &.secondary {
-    span{
-      color: $medium-blue;
-    }
-    svg{color:$medium-blue}
-    &::before {
-      background: $secondary;
-    }
-  }
-  &.white {
-    color: $primary;
-    &::before {
-      background: $white;
-      box-shadow: 0px 4px 10px 0px rgba(119, 136, 157, 0.20);
-    }
-    span, svg {
-      color: currentColor;
-    }
-  }
-  &:not(.secondary):hover {
-    &::before {
-      background: $secondary;
-    }
-  }
-  &.secondary:hover {
-    span, svg {
-    color: white;
-    }
-    &::before {
-      background: $medium-blue;
-    }
-  }
+.filled-button,
+.ghost-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	border: none;
+	background: transparent;
+	padding: 0 33px;
+	height: 40px;
+	box-sizing: border-box;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1;
+	cursor: pointer;
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		border-radius: 50px;
+		box-sizing: border-box;
+		background: $primary;
+		box-sizing: border-box;
+		transition: 1s $curve;
+	}
+	span,
+	svg {
+		color: $white;
+		z-index: 1;
+	}
+	& > svg {
+		margin-left: 22px;
+	}
+	span {
+		display: inline-block;
+		font-size: inherit;
+		font-weight: inherit;
+		position: relative;
+		z-index: 1;
+		pointer-events: none;
+		transition: transform 1s $curve, opacity 1s $curve;
+		&:last-child:not(:first-child) {
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			opacity: 0;
+			transform: translate(-50%, 150%);
+		}
+	}
+	&-icon {
+		width: auto;
+		height: 1.5em;
+		flex-shrink: 0;
+		display: inline-flex;
+		margin-left: 22px;
+		position: relative;
+		z-index: 1;
+		svg,
+		img {
+			height: 100%;
+			fill: currentColor;
+		}
+	}
+	&[data-direction="up"] {
+		.filled-button-icon,
+		.ghost-button-icon {
+			transform: rotate(-90deg);
+		}
+	}
+	&[data-direction="down"] {
+		.filled-button-icon,
+		.ghost-button-icon {
+			transform: rotate(90deg);
+		}
+	}
+	&[data-direction="left"] {
+		.filled-button-icon,
+		.ghost-button-icon {
+			transform: rotate(180deg);
+		}
+	}
+	&.with-icon {
+		padding-left: 30px;
+		padding-right: 30px;
+		.filled-button-icon,
+		.ghost-button-icon {
+			height: 1em;
+		}
+	}
+	&.download {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 20px;
+		}
+		.filled-button-icon,
+		.ghost-button-icon {
+			svg {
+				overflow: visible;
+				path {
+					transform-origin: 50% 50%;
+					transition: transform 1s $curve;
+				}
+			}
+		}
+		.download-button-list {
+			font-weight: normal;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 99;
+			margin-top: 8px;
+			padding: 24px;
+			font-size: 16px;
+			background: #1b4098;
+			color: white;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			border-radius: 6px;
+			transition: opacity 1s cubic-bezier(0.18, 0.78, 0, 1),
+				transform 1s cubic-bezier(0.18, 0.78, 0, 1);
+			transform: translateY(20px);
+			opacity: 0;
+			pointer-events: none;
+			list-style: none;
+			li {
+				margin: 5px 0;
+			}
+		}
+		&:hover .download-button-list {
+			transform: translateY(0px);
+			opacity: 1;
+			pointer-events: initial;
+		}
+	}
+	&.reverse {
+		flex-direction: row-reverse;
+		.filled-button-icon,
+		.ghost-button-icon {
+			margin-left: 0;
+			margin-right: 15px;
+		}
+	}
+	&.large {
+		height: 56px;
+		padding: 0px 42px;
+		@include respond-to("mobile-medium") {
+			margin-top: 20px;
+			margin-left: unset !important;
+		}
+	}
+	&.small {
+		height: 24px;
+		font-size: 12px;
+		padding: 0px 28px;
+		.filled-button-icon {
+			margin-left: 12px;
+		}
+	}
+	&.disabled {
+		color: $white;
+		pointer-events: none !important;
+		&::before {
+			background: $gray-03;
+		}
+	}
+	&.secondary {
+		span {
+			color: $medium-blue;
+		}
+		svg {
+			color: $medium-blue;
+		}
+		&::before {
+			background: $secondary;
+		}
+	}
+	&.white {
+		color: white;
+		&::before {
+			border: 1px solid white;
+			background: transparent;
+			box-shadow: 0px 4px 10px 0px rgba(119, 136, 157, 0.2);
+		}
+		span,
+		svg {
+			color: currentColor;
+		}
+	}
+	&:not(.secondary):hover {
+		&::before {
+			background: $secondary;
+		}
+	}
+	&.secondary:hover {
+		span,
+		svg {
+			color: white;
+		}
+		&::before {
+			background: $medium-blue;
+		}
+	}
 }
-.ghost-button{
-  &.secondary{ 
-    span, svg{color: $secondary;}
-    &:hover{
-      &::before{background-color: $secondary !important;}
-      span, svg{color: $medium-blue;}
-    }
-  }
-  &.white{
-    &:hover{
-      &::before{background-color: white !important;}
-      span, svg{color: $medium-blue;}
-    }
-  }
-  &:not(.secondary, .white):hover{
-    &::before{background-color: $medium-blue !important;}
-    span, svg{color: white;}
-  }
+.ghost-button {
+	&.secondary {
+		span,
+		svg {
+			color: $secondary;
+		}
+		&:hover {
+			&::before {
+				background-color: $secondary !important;
+			}
+			span,
+			svg {
+				color: $medium-blue;
+			}
+		}
+	}
+	&.white {
+		&:hover {
+			&::before {
+				background-color: white !important;
+				color: $medium-blue;
+			}
+			span,
+			svg {
+				color: $medium-blue;
+			}
+		}
+	}
+	&.empty {
+		span,
+		svg {
+			color: $medium-blue;
+		}
+		&::before {
+			background-color: transparent;
+			border: 1px solid $medium-blue;
+		}
+		&:hover {
+			&::before {
+				background-color: $medium-blue;
+			}
+			span,
+			svg {
+				color: white;
+			}
+		}
+	}
+	&:not(.secondary, .white):hover {
+		&::before {
+			background-color: $medium-blue !important;
+		}
+		span,
+		svg {
+			color: white;
+		}
+	}
 }

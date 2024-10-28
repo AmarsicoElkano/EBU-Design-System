@@ -1,1 +1,0 @@
-import '../../sass/pages/about.page.scss'

@@ -1,20 +1,34 @@
 .ghost-button {
-  color: $primary;
-  &::before {
-    background: transparent !important;
-    border: 1px solid currentColor;
-    box-shadow: none !important;
-  }
-  span, svg {
-    color: inherit;
-  }
-  &.white {
-    color: $white;
-  }
-  &.secondary {
-    color: $secondary;
-  }
-  &.disabled {
-    color: $gray-03;
-  }
+	color: $primary;
+	&::before {
+		background: transparent !important;
+		border: 1px solid currentColor;
+		box-shadow: none !important;
+	}
+	span,
+	svg {
+		color: inherit;
+	}
+	&.white {
+		color: white;
+	}
+	&.secondary {
+		color: $secondary;
+	}
+	&.disabled {
+		color: grey;
+
+		span,
+		svg {
+			color: $gray-04;
+		}
+	}
+
+	&.gray {
+		color: $gray-04;
+		span,
+		svg {
+			color: $gray-04;
+		}
+	}
 }

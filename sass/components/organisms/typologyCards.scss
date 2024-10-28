@@ -94,6 +94,7 @@
   }
 
   &.library-card {
+    overflow: initial;
     max-width: 384px;
 
     & .basicCards_tag {
@@ -252,6 +253,7 @@
     &.margin {
       margin-top: 64px;
     }
+    a{margin:0}
   }
 
   &_date {
@@ -298,5 +300,13 @@
 
   @media(max-width: 800px) {
     max-width: 100%;
+  }
+  &.bgTransparent{
+    box-shadow: none;
+    .CardTypology_main{
+      background-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }

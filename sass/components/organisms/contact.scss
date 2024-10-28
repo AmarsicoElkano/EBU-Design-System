@@ -219,6 +219,16 @@
   margin: 3px 0;
   font-weight: 600
 }
+.data-contact a{
+  display: block;
+  color:$primary;
+  display: flex;
+  align-items: center;
+  gap:5px;
+  font-size: 15px;
+  margin: 3px 0;
+  font-weight: 600;
+}
 
 .result-search-contact .profile .avatar {
   background-color: #1b4098;

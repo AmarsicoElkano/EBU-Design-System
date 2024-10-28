@@ -1,195 +1,216 @@
 .tags {
-  appearance: none;
-  border: none;
-  outline: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 40px;
-  background: white;
-  transition: ease-in .2s;
-  margin-top: -5px;
-  //Type
-  &.tag {
-    margin: auto;
-    margin-top: -5px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #1B4098;
-    padding: 0 16px;
-    border: 1px solid transparent;
-    box-shadow: 0px 4px 10px rgba(119, 136, 157, 0.2);
-    transition: border 0.4s ease-out;
-    height: 23px;
+	appearance: none;
+	border: none;
 
-    .btClose {
-      margin-left: 10px;
-      display: none;
-    }
+	outline: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 40px;
+	background: white;
+	transition: ease-in 0.2s;
+	margin-top: -5px;
+	//Type
+	&.tag {
+		margin: auto;
+		margin-top: -5px;
+		font-size: 14px;
+		font-weight: 500;
+		color: #1b4098;
+		padding: 0 16px;
+		border: 1px solid transparent;
+		box-shadow: 0px 4px 10px rgba(119, 136, 157, 0.2);
+		transition: border 0.4s ease-out;
+		height: 23px;
 
-    &.selected {
-      border: 1px solid #1B4098;
+		.btClose {
+			margin-left: 10px;
+			display: none;
+		}
 
-      .btClose {
-        display: block;
-      }
-    }
+		&.selected {
+			border: 1px solid #1b4098;
 
-    &.medium {
-      height: 33px;
-      padding: 0 18px;
-    }
+			.btClose {
+				display: block;
+			}
+		}
 
-    &.large {
-      font-size: 14px;
-      height: 40px;
-      padding: 0 18px;
+		&.medium {
+			height: 33px;
+			padding: 0 18px;
+		}
 
-      .btClose {
-        margin-left: 16px;
-      }
-    }
+		&.large {
+			font-size: 14px;
+			height: 40px;
+			padding: 0 18px;
 
-    &.disabled {
-      box-shadow: 0px 4px 10px rgba(119, 136, 157, 0.2);
-      background: #D7DDE3;
-    }
+			.btClose {
+				margin-left: 16px;
+			}
+		}
 
-    i {
-      width: 7px;
-      height: 7px;
-      border-radius: 7px;
-      display: block;
-      margin-right: 8px;
-      background-color: #00AD68;
+		&.disabled {
+			box-shadow: 0px 4px 10px rgba(119, 136, 157, 0.2);
+			background: #d7dde3;
+		}
 
-      &.bg-darkGreen {
-        background-color: #004E59;
-      }
+		i {
+			width: 7px;
+			height: 7px;
+			border-radius: 7px;
+			display: block;
+			margin-right: 8px;
+			background-color: #00ad68;
 
-      &.bg-lightGreen {
-        background-color: #00AD68;
-      }
+			&.bg-darkGreen {
+				background-color: #004e59;
+			}
 
-      &.bg-lightBlue {
-        background-color: $light-blue;
-      }
+			&.bg-lightGreen {
+				background-color: #00ad68;
+			}
 
-      &.bg-yellow {
-        background-color: #FFED00;
-      }
+			&.bg-lightBlue {
+				background-color: $light-blue;
+			}
 
-      &.bg-red {
-        background-color: #DD0031;
-      }
+			&.bg-yellow {
+				background-color: #ffed00;
+			}
 
-      &.bg-violet {
-        background-color: #873299;
-      }
+			&.bg-red {
+				background-color: #dd0031;
+			}
 
-      &.bg-gray {
-        background-color: #929292;
-      }
+			&.bg-violet {
+				background-color: #873299;
+			}
 
-      &.bg-orange {
-        background-color: #EE6F2D;
-      }
-    }
-  }
+			&.bg-gray {
+				background-color: #929292;
+			}
 
-  &.button {
-    i, .btClose {
-      display: none;
-    }
+			&.bg-orange {
+				background-color: #ee6f2d;
+			}
+		}
+	}
 
-    font-size: 14px;
-    font-weight: 400;
-    color: #1B4098;
-    border: 2px solid #1B4098;
-    height: 40px;
-    padding: 0 16px;
+	&.button {
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 60px;
+		align-items: center;
 
-    &.large {
-      min-width: 148px;
-    }
+		&.thin {
+			border: 1px solid #1b4098;
+		}
 
-    &.medium {
-      height: 36px;
-    }
+		&:hover path {
+			fill: $white;
+		}
 
-    &.small {
-      height: 30px;
-    }
+		.view-all {
+			margin-left: 7.5px;
+		}
 
-    &:hover {
-      background: #1B4098;
-      color: white;
-    }
+		i,
+		.btClose {
+			display: none;
+		}
 
-    &.disabled {
-      color: #77889D;
-      border-color: #77889D;
-    }
-  }
+		font-size: 14px;
+		font-weight: 400;
+		color: #1b4098;
+		border: 2px solid #1b4098;
+		height: 40px;
+		padding: 0 16px;
 
-  &.closeTag {
-    background: rgba(180, 191, 202, 0.2);
-    font-weight: 400;
-    font-size: 14px;
-    height: 32px;
-    padding: 0 16px;
-    color: #1B4098;
+		&.large {
+			min-width: 124px;
+			min-height: 52px;
+		}
 
-    .btClose {
-      margin-left: 12px;
-      background: #1B4098;
-      color: white;
-      width: 16px;
-      height: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 16px;
+		&.medium {
+			height: 36px;
+		}
 
-      svg {
-        transform: scale(.7);
-        stroke-width: 3px;
-      }
-    }
+		&.small {
+			height: 30px;
+		}
 
-    &:hover {
-      color: white;
-      background-color: #1B4098;
+		&:hover {
+			background: #1b4098;
+			color: white;
+		}
 
-      .btClose {
-        background-color: white;
-        color: #1B4098;
-      }
-    }
+		&.disabled {
+			color: #77889d;
+			border-color: #77889d;
+		}
+	}
 
-    &.disabled {
-      color: #77889D;
+	&.closeTag {
+		background: rgba(180, 191, 202, 0.2);
+		font-weight: 400;
+		font-size: 14px;
+		height: 32px;
+		padding: 0 16px;
+		color: #1b4098;
 
-      .btClose {
-        background-color: #77889D;
-      }
-    }
-  }
+		.btClose {
+			margin-left: 12px;
+			background: #1b4098;
+			color: white;
+			width: 16px;
+			height: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 16px;
 
-  &.disabled {
-    pointer-events: none;
-  }
+			svg {
+				transform: scale(0.7);
+				stroke-width: 3px;
+			}
+		}
 
-  svg {
-    display: block;
-  }
+		&:hover {
+			color: white;
+			background-color: #1b4098;
+
+			.btClose {
+				background-color: white;
+				color: #1b4098;
+			}
+		}
+
+		&.disabled {
+			color: #77889d;
+
+			.btClose {
+				background-color: #77889d;
+			}
+		}
+	}
+
+	&.disabled {
+		pointer-events: none;
+	}
+
+	svg {
+		display: block;
+	}
 }
 
 .gridTags {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 
-  .tags {
-    margin: 0 14px 14px 0;
-  }
+	.tags {
+		margin: 0 14px 14px 0;
+	}
 }

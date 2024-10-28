@@ -1,54 +1,56 @@
-.video-preview{
-  cursor: pointer;
-  figure {
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 24px;
-    position: relative;
-    &::before {
-      content: '';
-      width: 100%;
-      display: block;
-      // padding-bottom: 56.25%;
-      background-color: rgba(0, 0, 0, 0.2);
-    }
-    // &::after {
-    //   content: '';
-    //   width: 40px;
-    //   height: 40px;
-    //   top: 50%;
-    //   left: 50%;
-    //   position: absolute;
-    //   transform: translateX(-50%) translateY(-50%);
-    //   background-image: url('../../assets/img/play.svg');
-    //   background-size: contain;
-    //   background-repeat: no-repeat;
-    //   background-position: center;
-    //   pointer-events: none;
-    // }
-  }
-  .date {
-    display: block;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-    margin-bottom: 12px;
-    color: $darkBlue;
-  }
-  h4 {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 30px;
-    margin: 0;
-  }
-  h5, .subtitle {
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 26px;
-    margin: 0;
-  }
-  .subtitle {
-    opacity: 0.4;
-  }
+.video-preview {
+	cursor: pointer;
+	figure {
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+		margin-bottom: 24px;
+		position: relative;
+		&::before {
+			content: "";
+			width: 100%;
+			display: block;
+			padding-bottom: 56.25%;
+			background-color: rgba(0, 0, 0, 0.2);
+			background-image: url("../../assets/img/video-preview-1.png");
+		}
+		&::after {
+			content: "";
+			width: 40px;
+			height: 40px;
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			transform: translateX(-50%) translateY(-50%);
+			background-image: url("../../assets/img/play.svg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			pointer-events: none;
+		}
+	}
+	.date {
+		display: block;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 22px;
+		margin-bottom: 12px;
+		color: $darkBlue;
+	}
+	h4 {
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 30px;
+		margin: 0;
+	}
+	h5,
+	.subtitle {
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 26px;
+		margin: 0;
+	}
+	.subtitle {
+		opacity: 0.4;
+	}
 }

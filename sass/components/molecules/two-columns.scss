@@ -1,59 +1,152 @@
 .two-columns {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  .column {
-    width: calc(50% - 30px * 0.5);
-    p {
-      margin-top: 0;
-    }
-    .graph {
-      max-width: 700px;
-    }
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding-top: 40px;
+	&.stretch {
+		align-items: stretch;
+	}
+
+  &.padding--left {
+		justify-content: unset;
+    padding-top: 0px;
   }
-  &.reverse {
-    flex-direction: row-reverse;
-  }
-  &.left-larger {
-    .column {
-      width: 37%;
-      &:first-child {
-        min-width: 50%;
-      }
-    }
-  }
-  @include respond-to('tablet-big') {
-    flex-direction: column;
-    .column {
-      width: 100%;
-      &:first-child {
-        min-width: auto;
-      }
-      &:not(:last-child) {
-        margin-bottom: 40px;
-      }
-    }
-    &.reverse {
-      flex-direction: column;
-    }
-    &.left-larger {
-      .column {
-        width: 100%;
-        &:first-child {
-          min-width: auto;
-        }
-      }
-    }
-  }
+
+	.aside {
+		@include respond-to("tablet") {
+			display: none;
+		}
+	}
+	&.asideTabs {
+		padding-top: 0px;
+
+
+		ul {
+			margin-top: -20px;
+		}
+
+		.column .asideTab {
+			width: 100%;
+			max-width: 580px;
+			padding-left: 80px;
+		}
+
+		@include respond-to("tablet-big") {
+			.asideTab {
+				padding-left: 0px !important;
+			}
+			.column:first-child {
+				border-right: none !important;
+			}
+		}
+	}
+	.column {
+		width: calc(50% - 30px * 0.5);
+		p {
+			margin-top: 0;
+		}
+		.graph {
+			max-width: 700px;
+		}
+		.small-photo {
+			margin-left: -40px;
+			gap: 20px;
+			@include respond-to("tablet") {
+				margin-left: 0px;
+				padding-top: 20px;
+			}
+		}
+
+		.quote-char-dark {
+			width: 44px;
+			height: 28px;
+			@include respond-to("tablet") {
+				width: 44px;
+				height: 28px;
+				position: absolute;
+			}
+		}
+		.quote-text-wrapper {
+			max-width: 478px;
+			padding-top: 18px;
+
+			@include respond-to("tablet") {
+				padding-top: 60px;
+				position: relative;
+			}
+		}
+
+		.author {
+			padding-top: 40px;
+		}
+
+		.position,
+		.member {
+			padding-left: 40px;
+			@include respond-to("tablet") {
+				padding-left: 0px;
+			}
+		}
+	}
+	&.reverse {
+		flex-direction: row-reverse;
+	}
+	&.left-larger {
+		.column {
+			width: 37%;
+			&:first-child {
+				min-width: 50%;
+			}
+		}
+	}
+	&.right-larger {
+		.column {
+			min-height: 360px;
+			width: calc(30% - 30px * 0.5);
+			&:last-child {
+				width: calc(66% - 30px * 0.5);
+			}
+		}
+	}
+	@include respond-to("tablet-big") {
+		flex-direction: column;
+		.column {
+			width: 100%;
+			&:first-child {
+				min-width: auto;
+			}
+			&:not(:last-child) {
+				margin-bottom: 20px;
+				z-index: 1;
+			}
+		}
+		&.reverse {
+			flex-direction: column;
+		}
+		&.left-larger {
+			.column {
+				width: 100%;
+				&:first-child {
+					min-width: auto;
+				}
+			}
+		}
+	}
+	@include respond-to("mobile-medium") {
+		padding-top: 20px;
+	}
+	@include respond-to("mobile-small") {
+		padding-top: 20px;
+	}
 }
 .container {
-  .two-columns {
-    &:not(:first-child) {
-      margin-top: 40px;
-    }
-    &:not(:last-child) {
-      margin-bottom: 40px;
-    }
-  }
+	.two-columns {
+		&:not(:first-child) {
+			margin-top: 40px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
 }

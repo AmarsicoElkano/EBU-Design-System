@@ -1,1 +1,0 @@
-import '../../sass/pages/gallery.page.scss'

@@ -1,75 +1,89 @@
 .content_tabs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  button{
-    appearance:none;
-    border:none;
-    background:transparent;
-    margin:0;padding:0;
-    color:inherit;
-    transition:ease-in 0.3s;
-    cursor: pointer;
-  }
-  &.tabs{
-    .btn_tab{
-      font-size:22px;
-      font-weight: 600;
-      margin:0 32px;
-      position: relative;
-      padding: 6px 0;
-      border-bottom:2px solid transparent;
-      &.active{
-        color:#1B4098;
-        border-color: #1B4098;
-      }
-      &:hover{color:#1B4098}
-    }
-  }
-  &.buttonTabs{
-    .btn_tab{
-      color:#1B4098;
-      font-size: 14px;
-      font-weight: 400;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 1px;
-      width: 170px;
-      height: 40px;
-      background-color: rgba($color: #1B4098, $alpha: .20);
-      box-shadow: 0 5px 8px rgba($color: #1B4098, $alpha: .10);
-      &:first-child{
-        border-radius: 40px 0 0 40px;
-        margin-left: 0;
-      }
-      &:last-child{border-radius: 0 40px 40px 0;}
-      &.active,&:hover{background-color: #1B4098;color: white;}
-    }
-  }
-  &.stickyTabs{
-    background-color: white;
-    .btn_tab{
-      font-size:16px;
-      font-weight: 600;
-      height: 56px;
-      color: #77889D;
-      display: flex;
-      align-items: center;
-      border-bottom:2px solid transparent;
-      margin:0 16px;
-      &.active{
-        color: #1B4098;
-        border-color: #1B4098;
-      }
-      &:hover{
-        color: #1B4098;
-      }
-    }
-  }
-  @media (max-width: 900px){
-    justify-content: flex-start;
-    overflow-x: scroll;
-    padding-bottom: 13px;
-  }
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	button {
+		appearance: none;
+		border: none;
+		background: transparent;
+		margin: 0;
+		padding: 0;
+		color: inherit;
+		transition: ease-in 0.3s;
+		cursor: pointer;
+	}
+	&.tabs {
+		.btn_tab {
+			font-size: 22px;
+			font-weight: 600;
+			margin: 0 32px;
+			position: relative;
+			padding: 6px 0;
+			border-bottom: 2px solid transparent;
+			&.active {
+				color: #1b4098;
+				border-color: #1b4098;
+			}
+			&:hover {
+				color: #1b4098;
+			}
+		}
+	}
+	&.buttonTabs {
+		.btn_tab {
+			color: #1b4098;
+			font-size: 14px;
+			font-weight: 400;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: 1px;
+			width: 170px;
+			height: 40px;
+			background-color: rgba($color: #1b4098, $alpha: 0.2);
+			box-shadow: 0 5px 8px rgba($color: #1b4098, $alpha: 0.1);
+			&:first-child {
+				border-radius: 40px 0 0 40px;
+				margin-left: 0;
+			}
+			&:last-child {
+				border-radius: 0 40px 40px 0;
+			}
+			&.active,
+			&:hover {
+				background-color: #1b4098;
+				color: white;
+			}
+		}
+	}
+	&.stickyTabs {
+		margin-top: 80px;
+		background-color: white;
+		position: sticky;
+		top: 0;
+		z-index: 10000;
+		white-space: nowrap;
+		.btn_tab {
+			font-size: 16px;
+			font-weight: 600;
+			height: 56px;
+			color: #77889d;
+			display: flex;
+			align-items: center;
+			border-bottom: 2px solid transparent;
+			margin: 0 16px;
+			&.active {
+				color: $black;
+				border-color: $yellow;
+			}
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+	@media (max-width: 900px) {
+		justify-content: flex-start;
+		overflow-x: scroll;
+		padding-bottom: 13px;
+	}
 }
